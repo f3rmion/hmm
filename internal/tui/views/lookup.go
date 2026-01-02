@@ -281,10 +281,6 @@ func (m LookupModel) View() string {
 	// Results
 	if len(m.characters) > 0 {
 		b.WriteString(m.renderMultiCharView())
-	} else {
-		b.WriteString("\n")
-		b.WriteString(helpStyle.Render("Type Chinese characters and press Enter"))
-		b.WriteString("\n")
 	}
 
 	// Help
