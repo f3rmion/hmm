@@ -1,0 +1,2102 @@
+# Hanzi Movie Method - Props Configuration
+# Props represent character components (radicals and other parts)
+#
+# Each prop is an object that represents a character component.
+# Choose props based on:
+# 1. Appearance - what does the component look like?
+# 2. Meaning - what does the component mean?
+# 3. Combination - both appearance and meaning
+#
+# Tips:
+# - Props should be tangible, 3D objects you can visualize
+# - The more personal the connection, the better
+# - Consider how the prop can interact with actors in scenes
+#
+# This file contains all 214 Kangxi radicals plus common variants.
+
+props:
+  # ============================================
+  # BASIC STROKES (Radicals 1-6)
+  # ============================================
+  - id: "一"
+    component: "一"
+    name: "Chopstick"
+    type: appearance
+    meaning: "one, horizontal stroke"
+    description: "A single horizontal chopstick lying flat"
+
+  - id: "丨"
+    component: "丨"
+    name: "Bamboo pole"
+    type: appearance
+    meaning: "line, vertical stroke"
+    description: "A tall bamboo pole standing straight up"
+
+  - id: "丶"
+    component: "丶"
+    name: "Water droplet"
+    type: appearance
+    meaning: "dot"
+    description: "A single glistening water droplet"
+
+  - id: "丿"
+    component: "丿"
+    name: "Ski slope"
+    type: appearance
+    meaning: "slash, left-falling stroke"
+    description: "A steep ski slope going down to the left"
+
+  - id: "乙"
+    component: "乙"
+    name: "Fish hook"
+    type: appearance
+    meaning: "second (heavenly stem)"
+    description: "A curved fish hook shape"
+
+  - id: "⺄"
+    component: "⺄"
+    name: "Hook"
+    type: appearance
+    meaning: "second (variant)"
+    description: "A small curved hook"
+
+  - id: "乚"
+    component: "乚"
+    name: "Sickle"
+    type: appearance
+    meaning: "second (variant)"
+    description: "A curved sickle blade"
+
+  - id: "亅"
+    component: "亅"
+    name: "Coat hook"
+    type: appearance
+    meaning: "hook"
+    description: "A vertical line with a hook at the bottom"
+
+  - id: "㇏"
+    component: "㇏"
+    name: "Banana"
+    type: appearance
+    meaning: "right-falling stroke"
+    description: "A curved banana shape"
+
+  # ============================================
+  # NUMBERS & BASIC SHAPES (Radicals 7-10)
+  # ============================================
+  - id: "二"
+    component: "二"
+    name: "Railroad tracks"
+    type: appearance
+    meaning: "two"
+    description: "Two parallel horizontal lines like railroad tracks"
+
+  - id: "亠"
+    component: "亠"
+    name: "Top hat"
+    type: appearance
+    meaning: "lid, cover"
+    description: "A top hat or lid covering something"
+
+  - id: "十"
+    component: "十"
+    name: "Cross"
+    type: appearance
+    meaning: "ten"
+    description: "A Christian cross or plus sign"
+
+  # ============================================
+  # PEOPLE - Person Forms (Radicals 9-10)
+  # ============================================
+  - id: "人"
+    component: "人"
+    name: "Stick figure"
+    type: meaning
+    meaning: "person, man"
+    description: "A simple stick figure of a person walking"
+
+  - id: "亻"
+    component: "亻"
+    name: "Shadow person"
+    type: meaning
+    meaning: "person (side form)"
+    description: "A person's shadow on the wall"
+
+  - id: "𠆢"
+    component: "𠆢"
+    name: "Person roof"
+    type: appearance
+    meaning: "person (top form)"
+    description: "A person with arms spread forming a roof"
+
+  - id: "儿"
+    component: "儿"
+    name: "Baby legs"
+    type: meaning
+    meaning: "son, legs"
+    description: "A pair of little baby legs kicking"
+
+  # ============================================
+  # PEOPLE - Body Parts
+  # ============================================
+  - id: "口"
+    component: "口"
+    name: "Megaphone"
+    type: meaning
+    meaning: "mouth, opening"
+    description: "An open mouth shouting through a megaphone"
+
+  - id: "目"
+    component: "目"
+    name: "Camera lens"
+    type: meaning
+    meaning: "eye"
+    description: "A camera lens watching everything"
+
+  - id: "耳"
+    component: "耳"
+    name: "Headphones"
+    type: meaning
+    meaning: "ear"
+    description: "A pair of over-ear headphones"
+
+  - id: "手"
+    component: "手"
+    name: "Boxing glove"
+    type: meaning
+    meaning: "hand"
+    description: "A red boxing glove ready to punch"
+
+  - id: "扌"
+    component: "扌"
+    name: "Grabbing hand"
+    type: meaning
+    meaning: "hand (side form)"
+    description: "A hand reaching out to grab something"
+
+  - id: "龵"
+    component: "龵"
+    name: "Open palm"
+    type: meaning
+    meaning: "hand (top form)"
+    description: "An open palm facing upward"
+
+  - id: "足"
+    component: "足"
+    name: "Running shoe"
+    type: meaning
+    meaning: "foot"
+    description: "A bright running shoe in motion"
+
+  - id: "⻊"
+    component: "⻊"
+    name: "Footprint"
+    type: meaning
+    meaning: "foot (side form)"
+    description: "A muddy footprint on the ground"
+
+  - id: "心"
+    component: "心"
+    name: "Valentine heart"
+    type: meaning
+    meaning: "heart"
+    description: "A red Valentine's Day heart shape"
+
+  - id: "忄"
+    component: "忄"
+    name: "Heart monitor"
+    type: meaning
+    meaning: "heart (side form)"
+    description: "A beeping heart rate monitor"
+
+  - id: "⺗"
+    component: "⺗"
+    name: "Heartbeat"
+    type: meaning
+    meaning: "heart (bottom form)"
+    description: "A pulsing heartbeat line"
+
+  - id: "自"
+    component: "自"
+    name: "Nose"
+    type: meaning
+    meaning: "self, nose"
+    description: "A prominent nose (pointing at oneself)"
+
+  - id: "首"
+    component: "首"
+    name: "Trophy head"
+    type: meaning
+    meaning: "head, first"
+    description: "A mounted trophy head on the wall"
+
+  - id: "面"
+    component: "面"
+    name: "Mask"
+    type: meaning
+    meaning: "face"
+    description: "A theatrical mask showing a face"
+
+  - id: "靣"
+    component: "靣"
+    name: "Face paint"
+    type: meaning
+    meaning: "face (variant)"
+    description: "Colorful face paint on a performer"
+
+  - id: "頁"
+    component: "頁"
+    name: "Bobblehead"
+    type: meaning
+    meaning: "page, head"
+    description: "A bobblehead figure nodding"
+
+  - id: "骨"
+    component: "骨"
+    name: "Skeleton"
+    type: meaning
+    meaning: "bone"
+    description: "A dancing Halloween skeleton"
+
+  - id: "血"
+    component: "血"
+    name: "Blood bag"
+    type: meaning
+    meaning: "blood"
+    description: "A hospital blood transfusion bag"
+
+  - id: "身"
+    component: "身"
+    name: "Body pillow"
+    type: meaning
+    meaning: "body"
+    description: "A long body pillow for hugging"
+
+  - id: "毛"
+    component: "毛"
+    name: "Fur coat"
+    type: meaning
+    meaning: "fur, hair"
+    description: "A luxurious fur coat"
+
+  - id: "髟"
+    component: "髟"
+    name: "Wig"
+    type: meaning
+    meaning: "hair"
+    description: "A flowing theatrical wig"
+
+  - id: "皮"
+    component: "皮"
+    name: "Leather jacket"
+    type: meaning
+    meaning: "skin, leather"
+    description: "A cool leather motorcycle jacket"
+
+  - id: "舌"
+    component: "舌"
+    name: "Tongue"
+    type: meaning
+    meaning: "tongue"
+    description: "A tongue sticking out playfully"
+
+  - id: "齒"
+    component: "齒"
+    name: "Dentures"
+    type: meaning
+    meaning: "tooth"
+    description: "A set of chattering dentures"
+
+  - id: "鼻"
+    component: "鼻"
+    name: "Clown nose"
+    type: meaning
+    meaning: "nose"
+    description: "A red clown nose honking"
+
+  # ============================================
+  # PEOPLE - Family & Social
+  # ============================================
+  - id: "女"
+    component: "女"
+    name: "Red dress"
+    type: meaning
+    meaning: "woman, female"
+    description: "A beautiful flowing red dress"
+
+  - id: "子"
+    component: "子"
+    name: "Baby rattle"
+    type: meaning
+    meaning: "child, son"
+    description: "A colorful baby rattle shaking"
+
+  - id: "父"
+    component: "父"
+    name: "Dad's pipe"
+    type: meaning
+    meaning: "father"
+    description: "An old-fashioned smoking pipe"
+
+  - id: "老"
+    component: "老"
+    name: "Walking cane"
+    type: meaning
+    meaning: "old"
+    description: "A wooden walking cane for the elderly"
+
+  - id: "耂"
+    component: "耂"
+    name: "Gray beard"
+    type: meaning
+    meaning: "old (variant)"
+    description: "A long gray beard of an elder"
+
+  - id: "臣"
+    component: "臣"
+    name: "Servant's tray"
+    type: meaning
+    meaning: "minister, servant"
+    description: "A silver serving tray carried by a butler"
+
+  - id: "士"
+    component: "士"
+    name: "Scholar's scroll"
+    type: meaning
+    meaning: "scholar, gentleman"
+    description: "An ancient rolled-up scroll"
+
+  # ============================================
+  # NATURE - Celestial & Weather
+  # ============================================
+  - id: "日"
+    component: "日"
+    name: "Flashlight"
+    type: meaning
+    meaning: "sun, day"
+    description: "A bright flashlight beam cutting through darkness"
+
+  - id: "月"
+    component: "月"
+    name: "Crescent moon"
+    type: meaning
+    meaning: "moon, month"
+    description: "A glowing crescent moon in the night sky"
+
+  - id: "夕"
+    component: "夕"
+    name: "Sunset"
+    type: meaning
+    meaning: "evening, dusk"
+    description: "A beautiful orange sunset on the horizon"
+
+  - id: "雨"
+    component: "雨"
+    name: "Umbrella"
+    type: meaning
+    meaning: "rain"
+    description: "A colorful umbrella in the rain"
+
+  - id: "風"
+    component: "風"
+    name: "Kite"
+    type: meaning
+    meaning: "wind"
+    description: "A kite flying high in a strong wind"
+
+  - id: "𠘨"
+    component: "𠘨"
+    name: "Wind chime"
+    type: meaning
+    meaning: "wind (variant)"
+    description: "Tinkling wind chimes in the breeze"
+
+  - id: "气"
+    component: "气"
+    name: "Steam cloud"
+    type: meaning
+    meaning: "steam, air, gas"
+    description: "A puff of steam rising from a kettle"
+
+  - id: "青"
+    component: "青"
+    name: "Blue paint"
+    type: meaning
+    meaning: "blue, green, young"
+    description: "A bucket of bright blue-green paint"
+
+  - id: "靑"
+    component: "靑"
+    name: "Teal ribbon"
+    type: meaning
+    meaning: "blue (variant)"
+    description: "A teal colored ribbon"
+
+  # ============================================
+  # NATURE - Elements
+  # ============================================
+  - id: "水"
+    component: "水"
+    name: "Water bottle"
+    type: meaning
+    meaning: "water"
+    description: "A clear water bottle sloshing"
+
+  - id: "氵"
+    component: "氵"
+    name: "Three splashes"
+    type: meaning
+    meaning: "water (side form)"
+    description: "Three water droplets splashing"
+
+  - id: "氺"
+    component: "氺"
+    name: "Water drops"
+    type: meaning
+    meaning: "water (variant)"
+    description: "Several water droplets falling"
+
+  - id: "火"
+    component: "火"
+    name: "Torch"
+    type: meaning
+    meaning: "fire"
+    description: "A blazing torch illuminating the dark"
+
+  - id: "灬"
+    component: "灬"
+    name: "Hot coals"
+    type: meaning
+    meaning: "fire (bottom form)"
+    description: "Glowing hot coals at the bottom of a grill"
+
+  - id: "土"
+    component: "土"
+    name: "Dirt pile"
+    type: meaning
+    meaning: "earth, soil"
+    description: "A pile of fresh brown dirt"
+
+  - id: "木"
+    component: "木"
+    name: "Wooden plank"
+    type: meaning
+    meaning: "tree, wood"
+    description: "A solid wooden plank or log"
+
+  - id: "金"
+    component: "金"
+    name: "Gold bar"
+    type: meaning
+    meaning: "gold, metal"
+    description: "A shiny gold bar from a vault"
+
+  - id: "釒"
+    component: "釒"
+    name: "Metal key"
+    type: meaning
+    meaning: "metal (side form)"
+    description: "A shiny metal key ring"
+
+  - id: "钅"
+    component: "钅"
+    name: "Metal rod"
+    type: meaning
+    meaning: "metal (simplified side form)"
+    description: "A metal rod or bar"
+
+  - id: "石"
+    component: "石"
+    name: "Boulder"
+    type: meaning
+    meaning: "stone, rock"
+    description: "A large gray boulder"
+
+  # ============================================
+  # NATURE - Landscape
+  # ============================================
+  - id: "山"
+    component: "山"
+    name: "Mountain peak"
+    type: meaning
+    meaning: "mountain"
+    description: "A snow-capped mountain peak"
+
+  - id: "巛"
+    component: "巛"
+    name: "River"
+    type: meaning
+    meaning: "river"
+    description: "A winding river flowing through"
+
+  - id: "川"
+    component: "川"
+    name: "Stream"
+    type: meaning
+    meaning: "river, stream"
+    description: "Three parallel streams of water"
+
+  - id: "巜"
+    component: "巜"
+    name: "Creek"
+    type: meaning
+    meaning: "river (variant)"
+    description: "A small babbling creek"
+
+  - id: "田"
+    component: "田"
+    name: "Rice paddy"
+    type: meaning
+    meaning: "field"
+    description: "A flooded rice paddy field from above"
+
+  - id: "谷"
+    component: "谷"
+    name: "Valley"
+    type: meaning
+    meaning: "valley"
+    description: "A deep valley between mountains"
+
+  - id: "里"
+    component: "里"
+    name: "Village sign"
+    type: meaning
+    meaning: "village, mile"
+    description: "A wooden village welcome sign"
+
+  - id: "穴"
+    component: "穴"
+    name: "Cave entrance"
+    type: meaning
+    meaning: "cave, hole"
+    description: "A dark cave entrance in a cliff"
+
+  - id: "厂"
+    component: "厂"
+    name: "Cliff ledge"
+    type: meaning
+    meaning: "cliff"
+    description: "A rocky cliff ledge jutting out"
+
+  - id: "阜"
+    component: "阜"
+    name: "Mound"
+    type: meaning
+    meaning: "mound, hill"
+    description: "An earthen mound or burial hill"
+
+  - id: "阝"
+    component: "阝"
+    name: "Hill"
+    type: meaning
+    meaning: "mound (side form), city"
+    description: "A small rounded hill"
+
+  # ============================================
+  # NATURE - Plants
+  # ============================================
+  - id: "艸"
+    component: "艸"
+    name: "Grass patch"
+    type: meaning
+    meaning: "grass"
+    description: "A patch of green grass"
+
+  - id: "艹"
+    component: "艹"
+    name: "Lawn"
+    type: meaning
+    meaning: "grass (top form)"
+    description: "Two blades of grass on a lawn"
+
+  - id: "竹"
+    component: "竹"
+    name: "Bamboo stalk"
+    type: meaning
+    meaning: "bamboo"
+    description: "A tall green bamboo stalk"
+
+  - id: "⺮"
+    component: "⺮"
+    name: "Bamboo leaves"
+    type: meaning
+    meaning: "bamboo (top form)"
+    description: "Two bamboo leaves at the top"
+
+  - id: "禾"
+    component: "禾"
+    name: "Wheat stalk"
+    type: meaning
+    meaning: "grain"
+    description: "A golden wheat stalk ready for harvest"
+
+  - id: "米"
+    component: "米"
+    name: "Rice bowl"
+    type: meaning
+    meaning: "rice"
+    description: "A bowl of white rice"
+
+  - id: "麥"
+    component: "麥"
+    name: "Wheat sheaf"
+    type: meaning
+    meaning: "wheat"
+    description: "A bundle of wheat sheaves"
+
+  - id: "麻"
+    component: "麻"
+    name: "Hemp rope"
+    type: meaning
+    meaning: "hemp"
+    description: "A coil of rough hemp rope"
+
+  - id: "黍"
+    component: "黍"
+    name: "Millet grains"
+    type: meaning
+    meaning: "millet"
+    description: "Golden millet grains in a sack"
+
+  - id: "韭"
+    component: "韭"
+    name: "Leek"
+    type: meaning
+    meaning: "leek"
+    description: "A bundle of fresh green leeks"
+
+  - id: "瓜"
+    component: "瓜"
+    name: "Melon"
+    type: meaning
+    meaning: "melon"
+    description: "A ripe watermelon ready to slice"
+
+  - id: "豆"
+    component: "豆"
+    name: "Bean pot"
+    type: meaning
+    meaning: "bean"
+    description: "A ceramic pot filled with beans"
+
+  - id: "屮"
+    component: "屮"
+    name: "Sprout"
+    type: meaning
+    meaning: "sprout"
+    description: "A tiny green sprout emerging from soil"
+
+  - id: "生"
+    component: "生"
+    name: "Seedling"
+    type: meaning
+    meaning: "life, birth"
+    description: "A new seedling growing from the ground"
+
+  # ============================================
+  # ANIMALS - Mammals
+  # ============================================
+  - id: "犬"
+    component: "犬"
+    name: "Dog"
+    type: meaning
+    meaning: "dog"
+    description: "A loyal dog wagging its tail"
+
+  - id: "犭"
+    component: "犭"
+    name: "Dog leash"
+    type: meaning
+    meaning: "dog (side form)"
+    description: "A dog leash and collar"
+
+  - id: "馬"
+    component: "馬"
+    name: "Saddle"
+    type: meaning
+    meaning: "horse"
+    description: "A leather horse saddle"
+
+  - id: "牛"
+    component: "牛"
+    name: "Cow bell"
+    type: meaning
+    meaning: "cow, ox"
+    description: "A clanging cow bell"
+
+  - id: "牜"
+    component: "牜"
+    name: "Cattle prod"
+    type: meaning
+    meaning: "cow (side form)"
+    description: "A cattle herding prod"
+
+  - id: "⺧"
+    component: "⺧"
+    name: "Bull horns"
+    type: meaning
+    meaning: "cow (variant)"
+    description: "A pair of bull horns mounted on a wall"
+
+  - id: "羊"
+    component: "羊"
+    name: "Wool sweater"
+    type: meaning
+    meaning: "sheep, goat"
+    description: "A soft wool sweater"
+
+  - id: "⺶"
+    component: "⺶"
+    name: "Lamb"
+    type: meaning
+    meaning: "sheep (variant)"
+    description: "A fluffy little lamb"
+
+  - id: "⺷"
+    component: "⺷"
+    name: "Sheep horn"
+    type: meaning
+    meaning: "sheep (variant)"
+    description: "A curved sheep horn"
+
+  - id: "豕"
+    component: "豕"
+    name: "Pig"
+    type: meaning
+    meaning: "pig"
+    description: "A pink pig snorting"
+
+  - id: "豸"
+    component: "豸"
+    name: "Badger"
+    type: meaning
+    meaning: "badger, legless insect"
+    description: "A striped badger digging"
+
+  - id: "鹿"
+    component: "鹿"
+    name: "Antlers"
+    type: meaning
+    meaning: "deer"
+    description: "A magnificent set of deer antlers"
+
+  - id: "鼠"
+    component: "鼠"
+    name: "Mouse trap"
+    type: meaning
+    meaning: "rat, mouse"
+    description: "A wooden mouse trap with cheese"
+
+  # ============================================
+  # ANIMALS - Birds
+  # ============================================
+  - id: "鳥"
+    component: "鳥"
+    name: "Bird cage"
+    type: meaning
+    meaning: "bird"
+    description: "An ornate bird cage with a singing bird"
+
+  - id: "隹"
+    component: "隹"
+    name: "Sparrow"
+    type: meaning
+    meaning: "short-tailed bird"
+    description: "A small brown sparrow hopping"
+
+  - id: "羽"
+    component: "羽"
+    name: "Feather"
+    type: meaning
+    meaning: "feather, wing"
+    description: "A colorful peacock feather"
+
+  - id: "飛"
+    component: "飛"
+    name: "Paper airplane"
+    type: meaning
+    meaning: "fly"
+    description: "A paper airplane soaring through the air"
+
+  # ============================================
+  # ANIMALS - Aquatic & Reptiles
+  # ============================================
+  - id: "魚"
+    component: "魚"
+    name: "Fishing rod"
+    type: meaning
+    meaning: "fish"
+    description: "A fishing rod with a fish on the line"
+
+  - id: "龜"
+    component: "龜"
+    name: "Turtle shell"
+    type: meaning
+    meaning: "turtle"
+    description: "A patterned turtle shell"
+
+  - id: "黽"
+    component: "黽"
+    name: "Frog"
+    type: meaning
+    meaning: "frog"
+    description: "A green frog sitting on a lily pad"
+
+  - id: "龍"
+    component: "龍"
+    name: "Dragon kite"
+    type: meaning
+    meaning: "dragon"
+    description: "A magnificent Chinese dragon kite"
+
+  # ============================================
+  # ANIMALS - Insects
+  # ============================================
+  - id: "虫"
+    component: "虫"
+    name: "Caterpillar"
+    type: meaning
+    meaning: "insect, bug"
+    description: "A colorful caterpillar crawling"
+
+  - id: "虍"
+    component: "虍"
+    name: "Tiger stripes"
+    type: meaning
+    meaning: "tiger"
+    description: "Bold tiger stripe pattern"
+
+  # ============================================
+  # OBJECTS - Tools & Weapons
+  # ============================================
+  - id: "刀"
+    component: "刀"
+    name: "Chef's knife"
+    type: meaning
+    meaning: "knife"
+    description: "A sharp chef's knife gleaming"
+
+  - id: "刂"
+    component: "刂"
+    name: "Scalpel"
+    type: meaning
+    meaning: "knife (side form)"
+    description: "A precise surgical scalpel"
+
+  - id: "弓"
+    component: "弓"
+    name: "Bow"
+    type: meaning
+    meaning: "bow (weapon)"
+    description: "A traditional archery bow"
+
+  - id: "矢"
+    component: "矢"
+    name: "Arrow"
+    type: meaning
+    meaning: "arrow"
+    description: "A feathered arrow flying"
+
+  - id: "矛"
+    component: "矛"
+    name: "Spear"
+    type: meaning
+    meaning: "spear"
+    description: "A sharp-tipped spear"
+
+  - id: "戈"
+    component: "戈"
+    name: "Halberd"
+    type: meaning
+    meaning: "halberd, weapon"
+    description: "An ancient Chinese halberd"
+
+  - id: "殳"
+    component: "殳"
+    name: "Club"
+    type: meaning
+    meaning: "weapon, lance"
+    description: "A heavy wooden club"
+
+  - id: "斤"
+    component: "斤"
+    name: "Axe"
+    type: meaning
+    meaning: "axe, catty (weight)"
+    description: "A sharp woodcutter's axe"
+
+  - id: "耒"
+    component: "耒"
+    name: "Plow"
+    type: meaning
+    meaning: "plow"
+    description: "An old wooden plow"
+
+  - id: "攴"
+    component: "攴"
+    name: "Stick"
+    type: meaning
+    meaning: "tap, rap"
+    description: "A stick for tapping"
+
+  - id: "攵"
+    component: "攵"
+    name: "Drumstick"
+    type: meaning
+    meaning: "tap (variant)"
+    description: "A drumstick for beating"
+
+  - id: "支"
+    component: "支"
+    name: "Branch"
+    type: meaning
+    meaning: "branch, support"
+    description: "A sturdy tree branch"
+
+  - id: "聿"
+    component: "聿"
+    name: "Calligraphy brush"
+    type: meaning
+    meaning: "brush, writing"
+    description: "A traditional calligraphy brush"
+
+  - id: "⺻"
+    component: "⺻"
+    name: "Ink brush"
+    type: meaning
+    meaning: "brush (variant)"
+    description: "A brush dipped in ink"
+
+  # ============================================
+  # OBJECTS - Containers & Vessels
+  # ============================================
+  - id: "皿"
+    component: "皿"
+    name: "Dish"
+    type: meaning
+    meaning: "dish, plate"
+    description: "A ceramic serving dish"
+
+  - id: "缶"
+    component: "缶"
+    name: "Jar"
+    type: meaning
+    meaning: "jar, earthen pot"
+    description: "A clay storage jar"
+
+  - id: "鬲"
+    component: "鬲"
+    name: "Cauldron"
+    type: meaning
+    meaning: "cauldron, tripod"
+    description: "An ancient bronze cooking cauldron"
+
+  - id: "鼎"
+    component: "鼎"
+    name: "Tripod"
+    type: meaning
+    meaning: "tripod, ding vessel"
+    description: "A ceremonial bronze tripod vessel"
+
+  - id: "臼"
+    component: "臼"
+    name: "Mortar"
+    type: meaning
+    meaning: "mortar"
+    description: "A stone mortar for grinding"
+
+  - id: "斗"
+    component: "斗"
+    name: "Dipper"
+    type: meaning
+    meaning: "dipper, ladle"
+    description: "A wooden water dipper"
+
+  - id: "鬯"
+    component: "鬯"
+    name: "Wine vessel"
+    type: meaning
+    meaning: "sacrificial wine"
+    description: "An ornate sacrificial wine vessel"
+
+  - id: "酉"
+    component: "酉"
+    name: "Wine jug"
+    type: meaning
+    meaning: "wine, alcohol"
+    description: "A ceramic wine jug"
+
+  - id: "鹵"
+    component: "鹵"
+    name: "Salt shaker"
+    type: meaning
+    meaning: "salt"
+    description: "A crystal salt shaker"
+
+  # ============================================
+  # OBJECTS - Textiles & Materials
+  # ============================================
+  - id: "衣"
+    component: "衣"
+    name: "Shirt"
+    type: meaning
+    meaning: "clothing"
+    description: "A crisp white shirt"
+
+  - id: "衤"
+    component: "衤"
+    name: "Fabric"
+    type: meaning
+    meaning: "clothing (side form)"
+    description: "A piece of colorful fabric"
+
+  - id: "糸"
+    component: "糸"
+    name: "Silk thread"
+    type: meaning
+    meaning: "silk, thread"
+    description: "A spool of fine silk thread"
+
+  - id: "糹"
+    component: "糹"
+    name: "Thread spool"
+    type: meaning
+    meaning: "silk (side form)"
+    description: "A wooden thread spool"
+
+  - id: "巾"
+    component: "巾"
+    name: "Towel"
+    type: meaning
+    meaning: "towel, turban"
+    description: "A soft bath towel"
+
+  - id: "革"
+    component: "革"
+    name: "Leather belt"
+    type: meaning
+    meaning: "leather"
+    description: "A sturdy leather belt"
+
+  - id: "韋"
+    component: "韋"
+    name: "Tanned hide"
+    type: meaning
+    meaning: "tanned leather"
+    description: "A piece of tanned animal hide"
+
+  - id: "黹"
+    component: "黹"
+    name: "Embroidery"
+    type: meaning
+    meaning: "embroidery"
+    description: "Colorful embroidery needlework"
+
+  - id: "幺"
+    component: "幺"
+    name: "Thread"
+    type: meaning
+    meaning: "short thread, tiny"
+    description: "A tiny piece of thread"
+
+  # ============================================
+  # OBJECTS - Structures & Buildings
+  # ============================================
+  - id: "宀"
+    component: "宀"
+    name: "Roof"
+    type: meaning
+    meaning: "roof, house"
+    description: "A traditional Chinese roof"
+
+  - id: "广"
+    component: "广"
+    name: "Canopy"
+    type: meaning
+    meaning: "shelter, sloping roof"
+    description: "A protective canopy or shelter"
+
+  - id: "門"
+    component: "門"
+    name: "Gate"
+    type: meaning
+    meaning: "gate, door"
+    description: "A large wooden gate"
+
+  - id: "戶"
+    component: "戶"
+    name: "Door"
+    type: meaning
+    meaning: "door, household"
+    description: "A wooden door opening"
+
+  - id: "户"
+    component: "户"
+    name: "Doorway"
+    type: meaning
+    meaning: "door (simplified)"
+    description: "A doorway entrance"
+
+  - id: "戸"
+    component: "戸"
+    name: "Screen door"
+    type: meaning
+    meaning: "door (variant)"
+    description: "A sliding screen door"
+
+  - id: "几"
+    component: "几"
+    name: "Small table"
+    type: meaning
+    meaning: "small table"
+    description: "A low wooden table"
+
+  - id: "瓦"
+    component: "瓦"
+    name: "Roof tile"
+    type: meaning
+    meaning: "tile"
+    description: "A curved roof tile"
+
+  - id: "示"
+    component: "示"
+    name: "Altar"
+    type: meaning
+    meaning: "spirit, altar"
+    description: "A spiritual altar with offerings"
+
+  - id: "礻"
+    component: "礻"
+    name: "Shrine"
+    type: meaning
+    meaning: "spirit (side form)"
+    description: "A small roadside shrine"
+
+  # ============================================
+  # OBJECTS - Transportation
+  # ============================================
+  - id: "車"
+    component: "車"
+    name: "Wheel"
+    type: meaning
+    meaning: "cart, vehicle"
+    description: "A spinning wagon wheel"
+
+  - id: "车"
+    component: "车"
+    name: "Car"
+    type: meaning
+    meaning: "vehicle (simplified)"
+    description: "A car driving by"
+
+  - id: "舟"
+    component: "舟"
+    name: "Boat"
+    type: meaning
+    meaning: "boat"
+    description: "A wooden rowboat on water"
+
+  # ============================================
+  # OBJECTS - Enclosures & Boxes
+  # ============================================
+  - id: "囗"
+    component: "囗"
+    name: "Fence"
+    type: appearance
+    meaning: "enclosure"
+    description: "A square fence enclosing something"
+
+  - id: "冂"
+    component: "冂"
+    name: "Open box"
+    type: appearance
+    meaning: "upside-down box"
+    description: "A box open at the bottom"
+
+  - id: "凵"
+    component: "凵"
+    name: "Container"
+    type: appearance
+    meaning: "open box, receptacle"
+    description: "An open container from the top"
+
+  - id: "匚"
+    component: "匚"
+    name: "Open crate"
+    type: appearance
+    meaning: "right-open box"
+    description: "A crate open on the right side"
+
+  - id: "匸"
+    component: "匸"
+    name: "Hiding box"
+    type: meaning
+    meaning: "hiding enclosure"
+    description: "A box for hiding things"
+
+  - id: "网"
+    component: "网"
+    name: "Net"
+    type: meaning
+    meaning: "net"
+    description: "A fishing net spread out"
+
+  - id: "罒"
+    component: "罒"
+    name: "Wire mesh"
+    type: meaning
+    meaning: "net (top form)"
+    description: "A wire mesh grid"
+
+  - id: "⺲"
+    component: "⺲"
+    name: "Grid"
+    type: meaning
+    meaning: "net (variant)"
+    description: "A grid pattern"
+
+  - id: "罓"
+    component: "罓"
+    name: "Trap net"
+    type: meaning
+    meaning: "net (variant)"
+    description: "A trap net"
+
+  - id: "⺳"
+    component: "⺳"
+    name: "Netting"
+    type: meaning
+    meaning: "net (variant)"
+    description: "Fine netting material"
+
+  # ============================================
+  # OBJECTS - Food & Eating
+  # ============================================
+  - id: "食"
+    component: "食"
+    name: "Rice bowl"
+    type: meaning
+    meaning: "food, eat"
+    description: "A steaming bowl of rice"
+
+  - id: "飠"
+    component: "飠"
+    name: "Chopsticks"
+    type: meaning
+    meaning: "food (side form)"
+    description: "A pair of chopsticks picking up food"
+
+  - id: "饣"
+    component: "饣"
+    name: "Spoon"
+    type: meaning
+    meaning: "food (simplified side)"
+    description: "A soup spoon"
+
+  - id: "香"
+    component: "香"
+    name: "Incense"
+    type: meaning
+    meaning: "fragrant"
+    description: "A stick of fragrant incense burning"
+
+  - id: "甘"
+    component: "甘"
+    name: "Candy"
+    type: meaning
+    meaning: "sweet"
+    description: "A piece of sweet candy"
+
+  - id: "匕"
+    component: "匕"
+    name: "Spoon"
+    type: meaning
+    meaning: "spoon, ladle"
+    description: "A serving spoon"
+
+  # ============================================
+  # OBJECTS - Miscellaneous
+  # ============================================
+  - id: "玉"
+    component: "玉"
+    name: "Jade stone"
+    type: meaning
+    meaning: "jade"
+    description: "A polished green jade stone"
+
+  - id: "王"
+    component: "王"
+    name: "Crown"
+    type: meaning
+    meaning: "king"
+    description: "A golden king's crown"
+
+  - id: "⺩"
+    component: "⺩"
+    name: "Jade pendant"
+    type: meaning
+    meaning: "jade (side form)"
+    description: "A jade pendant on a necklace"
+
+  - id: "玄"
+    component: "玄"
+    name: "Black pearl"
+    type: meaning
+    meaning: "profound, mysterious"
+    description: "A mysterious black pearl"
+
+  - id: "貝"
+    component: "貝"
+    name: "Seashell"
+    type: meaning
+    meaning: "shell, money"
+    description: "A valuable cowrie shell (ancient money)"
+
+  - id: "角"
+    component: "角"
+    name: "Horn"
+    type: meaning
+    meaning: "horn, angle"
+    description: "An animal horn or trumpet"
+
+  - id: "牙"
+    component: "牙"
+    name: "Tusk"
+    type: meaning
+    meaning: "tooth, fang"
+    description: "An elephant ivory tusk"
+
+  - id: "爪"
+    component: "爪"
+    name: "Claw"
+    type: meaning
+    meaning: "claw"
+    description: "A sharp animal claw"
+
+  - id: "爫"
+    component: "爫"
+    name: "Talon"
+    type: meaning
+    meaning: "claw (top form)"
+    description: "A bird's talon gripping"
+
+  - id: "音"
+    component: "音"
+    name: "Speaker"
+    type: meaning
+    meaning: "sound"
+    description: "A speaker blasting music"
+
+  - id: "龠"
+    component: "龠"
+    name: "Flute"
+    type: meaning
+    meaning: "flute"
+    description: "A bamboo flute playing"
+
+  - id: "鼓"
+    component: "鼓"
+    name: "Drum"
+    type: meaning
+    meaning: "drum"
+    description: "A large ceremonial drum"
+
+  - id: "色"
+    component: "色"
+    name: "Paint palette"
+    type: meaning
+    meaning: "color"
+    description: "An artist's paint palette"
+
+  - id: "白"
+    component: "白"
+    name: "White flag"
+    type: meaning
+    meaning: "white"
+    description: "A white surrender flag"
+
+  - id: "黑"
+    component: "黑"
+    name: "Ink pot"
+    type: meaning
+    meaning: "black"
+    description: "A pot of black ink"
+
+  - id: "赤"
+    component: "赤"
+    name: "Red ribbon"
+    type: meaning
+    meaning: "red"
+    description: "A bright red ribbon"
+
+  - id: "黃"
+    component: "黃"
+    name: "Gold coin"
+    type: meaning
+    meaning: "yellow"
+    description: "A shiny yellow gold coin"
+
+  # ============================================
+  # ACTIONS & CONCEPTS - Movement
+  # ============================================
+  - id: "走"
+    component: "走"
+    name: "Running track"
+    type: meaning
+    meaning: "walk, run"
+    description: "A running track with lane markings"
+
+  - id: "赱"
+    component: "赱"
+    name: "Race track"
+    type: meaning
+    meaning: "run (variant)"
+    description: "A race track"
+
+  - id: "辶"
+    component: "辶"
+    name: "Skateboard"
+    type: meaning
+    meaning: "walk (radical)"
+    description: "A skateboard rolling along"
+
+  - id: "⻌"
+    component: "⻌"
+    name: "Scooter"
+    type: meaning
+    meaning: "walk (variant)"
+    description: "A kick scooter gliding"
+
+  - id: "⻍"
+    component: "⻍"
+    name: "Rollerblades"
+    type: meaning
+    meaning: "walk (variant)"
+    description: "A pair of rollerblades"
+
+  - id: "辵"
+    component: "辵"
+    name: "Road"
+    type: meaning
+    meaning: "walk (full form)"
+    description: "A winding road ahead"
+
+  - id: "行"
+    component: "行"
+    name: "Crosswalk"
+    type: meaning
+    meaning: "walk, go, row"
+    description: "A pedestrian crosswalk"
+
+  - id: "彳"
+    component: "彳"
+    name: "Left footstep"
+    type: meaning
+    meaning: "step (left)"
+    description: "A single left footstep"
+
+  - id: "立"
+    component: "立"
+    name: "Standing person"
+    type: meaning
+    meaning: "stand"
+    description: "A person standing at attention"
+
+  - id: "夂"
+    component: "夂"
+    name: "Footprint going"
+    type: meaning
+    meaning: "go"
+    description: "A footprint walking away"
+
+  - id: "夊"
+    component: "夊"
+    name: "Slow footsteps"
+    type: meaning
+    meaning: "go slowly"
+    description: "Slow shuffling footsteps"
+
+  - id: "止"
+    component: "止"
+    name: "Stop sign"
+    type: meaning
+    meaning: "stop"
+    description: "A red stop sign"
+
+  - id: "入"
+    component: "入"
+    name: "Entry door"
+    type: meaning
+    meaning: "enter"
+    description: "An entry door with arrow"
+
+  - id: "廴"
+    component: "廴"
+    name: "Long step"
+    type: meaning
+    meaning: "long stride"
+    description: "Taking a long stride forward"
+
+  - id: "禸"
+    component: "禸"
+    name: "Animal tracks"
+    type: meaning
+    meaning: "track (animal)"
+    description: "Animal tracks in the mud"
+
+  # ============================================
+  # ACTIONS & CONCEPTS - Communication
+  # ============================================
+  - id: "言"
+    component: "言"
+    name: "Microphone"
+    type: meaning
+    meaning: "speech, words"
+    description: "A microphone for speaking"
+
+  - id: "訁"
+    component: "訁"
+    name: "Speech bubble"
+    type: meaning
+    meaning: "speech (side form)"
+    description: "A comic speech bubble"
+
+  - id: "讠"
+    component: "讠"
+    name: "Chat icon"
+    type: meaning
+    meaning: "speech (simplified)"
+    description: "A chat message icon"
+
+  - id: "曰"
+    component: "曰"
+    name: "Quote marks"
+    type: meaning
+    meaning: "say"
+    description: "Quotation marks around words"
+
+  - id: "見"
+    component: "見"
+    name: "Binoculars"
+    type: meaning
+    meaning: "see"
+    description: "A pair of binoculars looking"
+
+  - id: "文"
+    component: "文"
+    name: "Document"
+    type: meaning
+    meaning: "script, culture"
+    description: "A written document or scroll"
+
+  # ============================================
+  # ACTIONS & CONCEPTS - Work & Actions
+  # ============================================
+  - id: "力"
+    component: "力"
+    name: "Dumbbell"
+    type: meaning
+    meaning: "power, strength"
+    description: "A heavy dumbbell being lifted"
+
+  - id: "工"
+    component: "工"
+    name: "Hammer"
+    type: meaning
+    meaning: "work, craft"
+    description: "A construction hammer"
+
+  - id: "用"
+    component: "用"
+    name: "Toolbox"
+    type: meaning
+    meaning: "use"
+    description: "A toolbox full of useful items"
+
+  - id: "弋"
+    component: "弋"
+    name: "Dart"
+    type: meaning
+    meaning: "shoot (arrow with string)"
+    description: "A dart hitting the target"
+
+  - id: "勹"
+    component: "勹"
+    name: "Wrapped package"
+    type: meaning
+    meaning: "wrap"
+    description: "A wrapped gift package"
+
+  - id: "冖"
+    component: "冖"
+    name: "Blanket"
+    type: meaning
+    meaning: "cover"
+    description: "A warm blanket covering"
+
+  - id: "冫"
+    component: "冫"
+    name: "Ice cube"
+    type: meaning
+    meaning: "ice"
+    description: "An ice cube melting"
+
+  - id: "釆"
+    component: "釆"
+    name: "Magnifying glass"
+    type: meaning
+    meaning: "distinguish, separate"
+    description: "A magnifying glass examining details"
+
+  # ============================================
+  # ABSTRACT & CONCEPTS - Size & Position
+  # ============================================
+  - id: "大"
+    component: "大"
+    name: "Giant"
+    type: meaning
+    meaning: "big, large"
+    description: "A giant towering over everything"
+
+  - id: "小"
+    component: "小"
+    name: "Ant"
+    type: meaning
+    meaning: "small"
+    description: "A tiny ant crawling"
+
+  - id: "⺌"
+    component: "⺌"
+    name: "Grain of sand"
+    type: meaning
+    meaning: "small (top form)"
+    description: "A grain of sand"
+
+  - id: "⺍"
+    component: "⺍"
+    name: "Speck"
+    type: meaning
+    meaning: "small (variant)"
+    description: "A tiny speck of dust"
+
+  - id: "高"
+    component: "高"
+    name: "Skyscraper"
+    type: meaning
+    meaning: "tall, high"
+    description: "A tall skyscraper reaching up"
+
+  - id: "髙"
+    component: "髙"
+    name: "Tower"
+    type: meaning
+    meaning: "tall (variant)"
+    description: "A tall tower"
+
+  - id: "長"
+    component: "長"
+    name: "Tape measure"
+    type: meaning
+    meaning: "long"
+    description: "A long tape measure extended"
+
+  - id: "镸"
+    component: "镸"
+    name: "Ruler"
+    type: meaning
+    meaning: "long (variant)"
+    description: "A long ruler for measuring"
+
+  - id: "中"
+    component: "中"
+    name: "Bullseye"
+    type: meaning
+    meaning: "middle, center"
+    description: "A bullseye target center"
+
+  - id: "上"
+    component: "上"
+    name: "Up arrow"
+    type: meaning
+    meaning: "up, above"
+    description: "An arrow pointing up"
+
+  - id: "下"
+    component: "下"
+    name: "Down arrow"
+    type: meaning
+    meaning: "down, below"
+    description: "An arrow pointing down"
+
+  # ============================================
+  # ABSTRACT - Comparison & Relations
+  # ============================================
+  - id: "比"
+    component: "比"
+    name: "Scale"
+    type: meaning
+    meaning: "compare"
+    description: "A balance scale comparing weights"
+
+  - id: "八"
+    component: "八"
+    name: "Split"
+    type: appearance
+    meaning: "eight, divide"
+    description: "Two things splitting apart"
+
+  - id: "艮"
+    component: "艮"
+    name: "Brake"
+    type: meaning
+    meaning: "stopping, mountain"
+    description: "A car brake stopping motion"
+
+  - id: "齊"
+    component: "齊"
+    name: "Level"
+    type: meaning
+    meaning: "even, equal"
+    description: "A carpenter's level showing even"
+
+  # ============================================
+  # ABSTRACT - Concepts & Ideas
+  # ============================================
+  - id: "又"
+    component: "又"
+    name: "Repeat button"
+    type: meaning
+    meaning: "again, also"
+    description: "A repeat/replay button"
+
+  - id: "廾"
+    component: "廾"
+    name: "Clasped hands"
+    type: meaning
+    meaning: "two hands"
+    description: "Two hands clasped together"
+
+  - id: "己"
+    component: "己"
+    name: "Mirror"
+    type: meaning
+    meaning: "oneself"
+    description: "A mirror reflecting yourself"
+
+  - id: "至"
+    component: "至"
+    name: "Finish line"
+    type: meaning
+    meaning: "arrive, reach"
+    description: "A finish line being crossed"
+
+  - id: "舛"
+    component: "舛"
+    name: "Opposing arrows"
+    type: meaning
+    meaning: "oppose, error"
+    description: "Two arrows pointing at each other"
+
+  - id: "鬥"
+    component: "鬥"
+    name: "Boxing gloves"
+    type: meaning
+    meaning: "fight"
+    description: "Two boxing gloves clashing"
+
+  - id: "非"
+    component: "非"
+    name: "X mark"
+    type: meaning
+    meaning: "wrong, not"
+    description: "A red X mark indicating wrong"
+
+  - id: "欠"
+    component: "欠"
+    name: "IOU note"
+    type: meaning
+    meaning: "lack, owe"
+    description: "An IOU note showing debt"
+
+  - id: "方"
+    component: "方"
+    name: "Compass"
+    type: meaning
+    meaning: "square, direction"
+    description: "A compass showing directions"
+
+  - id: "无"
+    component: "无"
+    name: "Empty box"
+    type: meaning
+    meaning: "not, without"
+    description: "An empty cardboard box"
+
+  - id: "旡"
+    component: "旡"
+    name: "Void"
+    type: meaning
+    meaning: "not (variant)"
+    description: "An empty void or space"
+
+  - id: "卜"
+    component: "卜"
+    name: "Crystal ball"
+    type: meaning
+    meaning: "divination"
+    description: "A fortune teller's crystal ball"
+
+  - id: "厶"
+    component: "厶"
+    name: "Secret box"
+    type: meaning
+    meaning: "private"
+    description: "A small secret box"
+
+  - id: "氏"
+    component: "氏"
+    name: "Family crest"
+    type: meaning
+    meaning: "clan, family"
+    description: "A family crest or coat of arms"
+
+  # ============================================
+  # ABSTRACT - Body/Death Related
+  # ============================================
+  - id: "尸"
+    component: "尸"
+    name: "Coffin"
+    type: meaning
+    meaning: "corpse, body"
+    description: "A wooden coffin"
+
+  - id: "歹"
+    component: "歹"
+    name: "Skull"
+    type: meaning
+    meaning: "death, bad"
+    description: "A skull and crossbones"
+
+  - id: "歺"
+    component: "歺"
+    name: "Bones"
+    type: meaning
+    meaning: "death (variant)"
+    description: "Scattered bones"
+
+  - id: "鬼"
+    component: "鬼"
+    name: "Ghost"
+    type: meaning
+    meaning: "ghost, demon"
+    description: "A spooky ghost floating"
+
+  # ============================================
+  # ABSTRACT - Lame/Special
+  # ============================================
+  - id: "尢"
+    component: "尢"
+    name: "Crutch"
+    type: meaning
+    meaning: "lame"
+    description: "A walking crutch"
+
+  - id: "尣"
+    component: "尣"
+    name: "Cane"
+    type: meaning
+    meaning: "lame (variant)"
+    description: "A medical cane"
+
+  - id: "毋"
+    component: "毋"
+    name: "No sign"
+    type: meaning
+    meaning: "do not"
+    description: "A 'no' prohibition sign"
+
+  - id: "母"
+    component: "母"
+    name: "Mother's locket"
+    type: meaning
+    meaning: "mother"
+    description: "A locket with mother's picture"
+
+  - id: "⺟"
+    component: "⺟"
+    name: "Mother figure"
+    type: meaning
+    meaning: "mother (variant)"
+    description: "A mother figure silhouette"
+
+  - id: "而"
+    component: "而"
+    name: "And sign"
+    type: meaning
+    meaning: "and, but"
+    description: "An ampersand & symbol"
+
+  - id: "疋"
+    component: "疋"
+    name: "Cloth bolt"
+    type: meaning
+    meaning: "bolt of cloth"
+    description: "A bolt of fabric"
+
+  - id: "⺪"
+    component: "⺪"
+    name: "Fabric roll"
+    type: meaning
+    meaning: "cloth (variant)"
+    description: "A roll of fabric"
+
+  - id: "疒"
+    component: "疒"
+    name: "Hospital bed"
+    type: meaning
+    meaning: "sickness"
+    description: "A hospital bed for the sick"
+
+  - id: "癶"
+    component: "癶"
+    name: "Tent"
+    type: meaning
+    meaning: "dotted tent, legs"
+    description: "A camping tent"
+
+  - id: "卩"
+    component: "卩"
+    name: "Seal stamp"
+    type: meaning
+    meaning: "seal"
+    description: "A red ink seal stamp"
+
+  - id: "㔾"
+    component: "㔾"
+    name: "Official seal"
+    type: meaning
+    meaning: "seal (variant)"
+    description: "An official government seal"
+
+  - id: "肉"
+    component: "肉"
+    name: "Steak"
+    type: meaning
+    meaning: "meat, flesh"
+    description: "A juicy steak"
+
+  - id: "⺼"
+    component: "⺼"
+    name: "Meat slice"
+    type: meaning
+    meaning: "meat (side form)"
+    description: "A slice of meat"
+
+  - id: "隶"
+    component: "隶"
+    name: "Chains"
+    type: meaning
+    meaning: "slave, attached"
+    description: "Chains and shackles"
+
+  - id: "邑"
+    component: "邑"
+    name: "City wall"
+    type: meaning
+    meaning: "city"
+    description: "An ancient city wall"
+
+  - id: "⻏"
+    component: "⻏"
+    name: "City gate"
+    type: meaning
+    meaning: "city (right side form)"
+    description: "A city gate entrance"
+
+  - id: "⻖"
+    component: "⻖"
+    name: "Town"
+    type: meaning
+    meaning: "mound/city (left side form)"
+    description: "A small town"
+
+  - id: "辛"
+    component: "辛"
+    name: "Chili pepper"
+    type: meaning
+    meaning: "bitter, laborious"
+    description: "A hot chili pepper"
+
+  - id: "辰"
+    component: "辰"
+    name: "Alarm clock"
+    type: meaning
+    meaning: "morning, celestial"
+    description: "An alarm clock ringing in the morning"
+
+  - id: "彐"
+    component: "彐"
+    name: "Pig snout"
+    type: appearance
+    meaning: "snout"
+    description: "A pig's snout sniffing"
+
+  - id: "彑"
+    component: "彑"
+    name: "Snout"
+    type: appearance
+    meaning: "snout (variant)"
+    description: "An animal snout"
+
+  - id: "彡"
+    component: "彡"
+    name: "Whiskers"
+    type: appearance
+    meaning: "bristle, hair"
+    description: "Long cat whiskers"
+
+  - id: "片"
+    component: "片"
+    name: "Playing card"
+    type: meaning
+    meaning: "slice, piece"
+    description: "A playing card"
+
+  - id: "爻"
+    component: "爻"
+    name: "X pattern"
+    type: appearance
+    meaning: "double X (I Ching)"
+    description: "An X pattern like I Ching lines"
+
+  - id: "爿"
+    component: "爿"
+    name: "Split log"
+    type: meaning
+    meaning: "half tree trunk"
+    description: "A split log of wood"
+
+  - id: "丬"
+    component: "丬"
+    name: "Wood plank"
+    type: meaning
+    meaning: "half trunk (side)"
+    description: "A wooden plank"
+
+  - id: "干"
+    component: "干"
+    name: "Dried fish"
+    type: meaning
+    meaning: "dry, shield"
+    description: "A dried fish hanging"
+
+  - id: "寸"
+    component: "寸"
+    name: "Inch ruler"
+    type: meaning
+    meaning: "inch, measure"
+    description: "A small inch ruler"
+
+  # ============================================
+  # Add more props as you encounter new components
+  # ============================================

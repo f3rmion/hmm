@@ -1,0 +1,369 @@
+# Hanzi Movie Method - Actors Configuration
+# 55 Actors representing Pinyin Initials
+#
+# Categories:
+# - male: Real men (basic consonant initials)
+# - female: Real women (consonant+i initials, "yi" sound)
+# - fictional: Fictional characters (consonant+u initials, "wu" sound)
+# - god_leader: Gods or world leaders (consonant+ü initials, "yu" sound)
+# - null: No initial (syllables starting with vowel)
+#
+# Tips for choosing actors:
+# - Name should give a clue to the pronunciation (first name, surname, or nickname)
+# - Choose people you know well or know a lot about
+# - The more emotional connection, the better
+# - Mix of friends, family, celebrities, historical figures
+
+actors:
+  # ============================================
+  # NULL INITIAL (1)
+  # For syllables with no consonant (a, o, e, ai, etc.)
+  # ============================================
+  - id: "null"
+    initial: ""
+    category: null
+    name: "Jackie Chan"  # Recommended: Jackie Chan, or someone universally recognizable
+    description: "Used for syllables with no initial consonant"
+
+  # ============================================
+  # MALE ACTORS (18)
+  # Basic consonant initials - choose real men
+  # ============================================
+  - id: "b"
+    initial: "b"
+    category: male
+    name: "Brad Pitt"  # e.g., Bill Murray, Brad Pitt, your friend Bob
+    description: ""
+
+  - id: "p"
+    initial: "p"
+    category: male
+    name: "Paul McCartney"  # e.g., Paul McCartney, your uncle Pete
+    description: ""
+
+  - id: "m"
+    initial: "m"
+    category: male
+    name: "Michael Jordan"  # e.g., Michael Jordan, your friend Mike
+    description: ""
+
+  - id: "f"
+    initial: "f"
+    category: male
+    name: "Frank Sinatra"  # e.g., Frank Sinatra, your coworker Fred
+    description: ""
+
+  - id: "d"
+    initial: "d"
+    category: male
+    name: "Denzel Washington"  # e.g., David Bowie, your neighbor Dan
+    description: ""
+
+  - id: "t"
+    initial: "t"
+    category: male
+    name: "Tom Hanks"  # e.g., Tom Hanks, your brother Tim
+    description: ""
+
+  - id: "n"
+    initial: "n"
+    category: male
+    name: "Nicolas Cage"  # e.g., Nicolas Cage, your friend Nick
+    description: ""
+
+  - id: "l"
+    initial: "l"
+    category: male
+    name: "Leonardo DiCaprio"  # e.g., Leonardo DiCaprio, your cousin Larry
+    description: ""
+
+  - id: "g"
+    initial: "g"
+    category: male
+    name: "George Clooney"  # e.g., George Clooney, your grandpa Gary
+    description: ""
+
+  - id: "k"
+    initial: "k"
+    category: male
+    name: "Keanu Reeves"  # e.g., Keanu Reeves, your friend Kevin
+    description: ""
+
+  - id: "h"
+    initial: "h"
+    category: male
+    name: "Harrison Ford"  # e.g., Harrison Ford, your colleague Henry
+    description: ""
+
+  - id: "zh"
+    initial: "zh"
+    category: male
+    name: "Joe Biden"
+    description: "Note: 'zhi' is male (fake i), not female. 'zh' sounds like 'j'"
+
+  - id: "ch"
+    initial: "ch"
+    category: male
+    name: "Chuck Norris"  # e.g., Charlie Chaplin, Chuck Norris
+    description: "Note: 'chi' is male (fake i), not female"
+
+  - id: "sh"
+    initial: "sh"
+    category: male
+    name: "Shaquille O'Neal"  # e.g., Sean Connery, Shaquille O'Neal
+    description: "Note: 'shi' is male (fake i), not female"
+
+  - id: "r"
+    initial: "r"
+    category: male
+    name: "Ryan Gosling"  # e.g., Robert De Niro, your friend Ryan
+    description: "Note: 'ri' is male (fake i), not female"
+
+  - id: "z"
+    initial: "z"
+    category: male
+    name: "Zinedine Zidane"  # e.g., Zinedine Zidane, your friend Zack
+    description: "Note: 'zi' is male (fake i), not female"
+
+  - id: "c"
+    initial: "c"
+    category: male
+    name: "Clint Eastwood"  # e.g., Clint Eastwood (sounds like 'ts')
+    description: "Note: 'ci' is male (fake i), not female"
+
+  - id: "s"
+    initial: "s"
+    category: male
+    name: "Samuel L. Jackson"  # e.g., Samuel L. Jackson, your friend Steve
+    description: "Note: 'si' is male (fake i), not female"
+
+  # ============================================
+  # FEMALE ACTORS (11)
+  # Consonant+i initials - choose real women
+  # The "i" represents the "ee" sound in these
+  # ============================================
+  - id: "y"
+    initial: "y"
+    category: female
+    name: "Yoko Ono"  # e.g., Yoko Ono, your friend Yvonne
+    description: "Standard pinyin writes 'yi' as 'y' alone"
+
+  - id: "bi"
+    initial: "bi"
+    category: female
+    name: "Beyonce"  # e.g., Beyonce, Britney Spears, your friend Bianca
+    description: ""
+
+  - id: "pi"
+    initial: "pi"
+    category: female
+    name: "Pink"  # e.g., Pink (singer), your aunt Patricia
+    description: ""
+
+  - id: "mi"
+    initial: "mi"
+    category: female
+    name: "Miley Cyrus"  # e.g., Miley Cyrus, your friend Michelle
+    description: ""
+
+  - id: "di"
+    initial: "di"
+    category: female
+    name: "Princess Diana"  # e.g., Diana Ross, Princess Diana
+    description: ""
+
+  - id: "ti"
+    initial: "ti"
+    category: female
+    name: "Tina Turner"  # e.g., Tina Turner, Mother Teresa
+    description: ""
+
+  - id: "ni"
+    initial: "ni"
+    category: female
+    name: "Natalie Portman"  # e.g., Nicole Kidman, your friend Nina
+    description: ""
+
+  - id: "li"
+    initial: "li"
+    category: female
+    name: "Lisa Kudrow (Friends)"  # e.g., Lisa Simpson, your sister Linda
+    description: ""
+
+  - id: "ji"
+    initial: "ji"
+    category: female
+    name: "Jennifer Lopez"  # e.g., Jennifer Lopez, your friend Gina
+    description: ""
+
+  - id: "qi"
+    initial: "qi"
+    category: female
+    name: "Queen Elisabeth"  # e.g., Queen Elizabeth, your friend Queenie
+    description: "Sounds like 'chee'"
+
+  - id: "xi"
+    initial: "xi"
+    category: female
+    name: "Xena (Warrior Princess)"  # e.g., Xena (Warrior Princess), your friend Sheila
+    description: "Sounds like 'shee'"
+
+  # ============================================
+  # FICTIONAL ACTORS (19)
+  # Consonant+u initials - choose fictional characters
+  # Must be clearly fictional (movies, books, games, etc.)
+  # ============================================
+  - id: "w"
+    initial: "w"
+    category: fictional
+    name: "Wario"  # e.g., Wolverine, Wario, Wonder Woman
+    description: "Standard pinyin writes 'wu' as 'w' alone"
+
+  - id: "bu"
+    initial: "bu"
+    category: fictional
+    name: "Bugs Bunny"  # e.g., Bugs Bunny, Buzz Lightyear
+    description: ""
+
+  - id: "pu"
+    initial: "pu"
+    category: fictional
+    name: "Pikachu"  # e.g., Puss in Boots, Pikachu
+    description: ""
+
+  - id: "mu"
+    initial: "mu"
+    category: fictional
+    name: "Mario"  # e.g., Mulan, Mario
+    description: ""
+
+  - id: "fu"
+    initial: "fu"
+    category: fictional
+    name: "Frodo"  # e.g., Fiona (Shrek), Frodo
+    description: ""
+
+  - id: "du"
+    initial: "du"
+    category: fictional
+    name: "Dumbledore"  # e.g., Dumbledore, Darth Vader, Donald Duck
+    description: ""
+
+  - id: "tu"
+    initial: "tu"
+    category: fictional
+    name: "Thor"  # e.g., Tony Stark (Iron Man), Thanos
+    description: ""
+
+  - id: "nu"
+    initial: "nu"
+    category: fictional
+    name: "Naruto"  # e.g., Nemo, Naruto
+    description: ""
+
+  - id: "lu"
+    initial: "lu"
+    category: fictional
+    name: "Luke Skywalker"  # e.g., Luigi, Luke Skywalker, Loki
+    description: ""
+
+  - id: "gu"
+    initial: "gu"
+    category: fictional
+    name: "Gandalf"  # e.g., Goku, Groot, Gandalf
+    description: ""
+
+  - id: "ku"
+    initial: "ku"
+    category: fictional
+    name: "King Kong"  # e.g., Kermit the Frog, King Kong
+    description: ""
+
+  - id: "hu"
+    initial: "hu"
+    category: fictional
+    name: "Harry Potter"  # e.g., Hulk, Harry Potter
+    description: ""
+
+  - id: "zhu"
+    initial: "zhu"
+    category: fictional
+    name: "Zelda"  # e.g., Zhu Bajie (Journey to the West), Zelda
+    description: ""
+
+  - id: "chu"
+    initial: "chu"
+    category: fictional
+    name: "Chewbacca"  # e.g., Chucky, Chewbacca
+    description: ""
+
+  - id: "shu"
+    initial: "shu"
+    category: fictional
+    name: "Shrek"  # e.g., Shrek, Sherlock Holmes
+    description: ""
+
+  - id: "ru"
+    initial: "ru"
+    category: fictional
+    name: "R2-D2"  # e.g., R2-D2, Rapunzel
+    description: ""
+
+  - id: "zu"
+    initial: "zu"
+    category: fictional
+    name: "Zuko (Avatar)"  # e.g., Zuko (Avatar), Zorro
+    description: ""
+
+  - id: "cu"
+    initial: "cu"
+    category: fictional
+    name: "Captain Hook"  # e.g., Curious George, Captain Hook
+    description: ""
+
+  - id: "su"
+    initial: "su"
+    category: fictional
+    name: "Superman"  # e.g., Superman, SpongeBob, Simba
+    description: ""
+
+  # ============================================
+  # GODS / WORLD LEADERS (6)
+  # Consonant+ü initials - choose gods or world leaders
+  # Only 6 in this category
+  # ============================================
+  - id: "yu"
+    initial: "yu"
+    category: god_leader
+    name: "Yoda"  # e.g., Zeus, Yoda (if treating as godlike), Julius Caesar
+    description: "Standard pinyin writes 'yü' as 'yu'"
+
+  - id: "nv"
+    initial: "nü"
+    category: god_leader
+    name: "Neptune"
+    description: "Roman god of the sea. Written as 'nü' or 'nv' in pinyin"
+
+  - id: "lv"
+    initial: "lü"
+    category: god_leader
+    name: "Loki"  # e.g., Loki (as a god), Louis XIV
+    description: "Written as 'lü' or 'lv' in pinyin"
+
+  - id: "ju"
+    initial: "ju"
+    category: god_leader
+    name: "Jesus"  # e.g., Jupiter, Jesus, Joan of Arc
+    description: "Pronounced with ü sound despite 'u' spelling"
+
+  - id: "qu"
+    initial: "qu"
+    category: god_leader
+    name: "Queen Victoria"  # e.g., Quetzalcoatl, Queen Victoria
+    description: "Pronounced with ü sound despite 'u' spelling"
+
+  - id: "xu"
+    initial: "xu"
+    category: god_leader
+    name: "Xi Jinping"  # e.g., Shiva, Xi Jinping (world leader)
+    description: "Pronounced with ü sound despite 'u' spelling"

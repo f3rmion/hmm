@@ -1,0 +1,355 @@
+# Hanzi Movie Method - Sets Configuration
+# 13 Sets representing Pinyin Finals
+#
+# Each set is a location (memory palace) from your life.
+# Within each set, there are 5 rooms representing the 5 tones.
+#
+# Tips for choosing sets:
+# - Choose places with strong emotional memories
+# - Each place should have at least 4 clearly defined areas
+# - The link between the location and the final sound helps memory
+# - Consider the "epoch" - the chapter of your life this place represents
+
+sets:
+  # ============================================
+  # NULL FINAL (Ø)
+  # Most common - used when initial contains the vowel
+  # ============================================
+  - id: "null"
+    final: ""
+    name: "Childhood Home, Bonn"
+    link: "Foundation - your base, no consonant needed"
+    description: "The house where you grew up in Bonn"
+    epoch: "Childhood years"
+    rooms:
+      - tone: 1
+        name: "Front entrance"
+        description: "Standing at the front door"
+      - tone: 2
+        name: "Kitchen"
+        description: "The family kitchen"
+      - tone: 3
+        name: "Living room"
+        description: "The cozy living room"
+      - tone: 4
+        name: "Bathroom"
+        description: "The family bathroom"
+      - tone: 5
+        name: "Attic"
+        description: "Up in the attic under the roof"
+
+  # ============================================
+  # FINAL: -a
+  # ============================================
+  - id: "a"
+    final: "a"
+    name: "Fabben Climbing Gym, Gothenburg"
+    link: "Fabben - the 'a' sound, plus 'ahhh!' when falling"
+    description: "The bouldering gym where you climbed"
+    epoch: "Gothenburg years"
+    rooms:
+      - tone: 1
+        name: "Reception entrance"
+        description: "Walking in past the front desk"
+      - tone: 2
+        name: "Locker room"
+        description: "Changing area with lockers"
+      - tone: 3
+        name: "Bouldering area"
+        description: "The main bouldering walls"
+      - tone: 4
+        name: "Training area"
+        description: "Weights and hangboards"
+      - tone: 5
+        name: "Top of the wall"
+        description: "At the top of the highest boulder"
+
+  # ============================================
+  # FINAL: -o
+  # ============================================
+  - id: "o"
+    final: "o"
+    name: "Brother's Home, Bonn"
+    link: "Brother - the 'o' sound"
+    description: "Your brother's place in Bonn"
+    epoch: "Family connections"
+    rooms:
+      - tone: 1
+        name: "Front door"
+        description: "Arriving at the entrance"
+      - tone: 2
+        name: "Hallway"
+        description: "The entrance hallway"
+      - tone: 3
+        name: "Living room"
+        description: "The main living area"
+      - tone: 4
+        name: "Bathroom"
+        description: "The bathroom"
+      - tone: 5
+        name: "Balcony/Roof"
+        description: "Outside on the balcony or roof"
+
+  # ============================================
+  # FINAL: -e
+  # ============================================
+  - id: "e"
+    final: "e"
+    name: "Grundschule, Bonn"
+    link: "Schule - the 'e' ending"
+    description: "Your elementary school in Bonn"
+    epoch: "Early childhood education"
+    rooms:
+      - tone: 1
+        name: "School gate"
+        description: "The main entrance gate"
+      - tone: 2
+        name: "Corridor"
+        description: "The school hallway with coat hooks"
+      - tone: 3
+        name: "Classroom"
+        description: "Your classroom with small desks"
+      - tone: 4
+        name: "Schoolyard"
+        description: "The playground outside"
+      - tone: 5
+        name: "Roof"
+        description: "On top of the school building"
+
+  # ============================================
+  # FINAL: -ai
+  # ============================================
+  - id: "ai"
+    final: "ai"
+    name: "AstraZeneca, Gothenburg"
+    link: "AI research - perfect match!"
+    description: "Your postdoc in AI at AstraZeneca"
+    epoch: "Postdoc years, AI research"
+    rooms:
+      - tone: 1
+        name: "Building lobby"
+        description: "The corporate entrance and reception"
+      - tone: 2
+        name: "Elevator"
+        description: "Riding up in the elevator"
+      - tone: 3
+        name: "Office desk"
+        description: "Your desk and workstation"
+      - tone: 4
+        name: "Meeting room"
+        description: "Glass-walled conference room"
+      - tone: 5
+        name: "Rooftop"
+        description: "On the roof of the building"
+
+  # ============================================
+  # FINAL: -ei
+  # ============================================
+  - id: "ei"
+    final: "ei"
+    name: "Vacation Home, Sweden"
+    link: "Hej! - Swedish greeting sounds like 'ay'"
+    description: "The Christmas vacation home in Sweden"
+    epoch: "Swedish holidays"
+    rooms:
+      - tone: 1
+        name: "Porch"
+        description: "The wooden porch entrance"
+      - tone: 2
+        name: "Kitchen"
+        description: "The warm kitchen"
+      - tone: 3
+        name: "Living room"
+        description: "Cozy living room with fireplace"
+      - tone: 4
+        name: "Sauna"
+        description: "The Swedish sauna"
+      - tone: 5
+        name: "Snowy roof"
+        description: "The roof covered in snow"
+
+  # ============================================
+  # FINAL: -ao
+  # ============================================
+  - id: "ao"
+    final: "ao"
+    name: "Office, Berlin"
+    link: "Now - your current work, the 'ow' sound"
+    description: "Your office in Berlin"
+    epoch: "Current chapter"
+    rooms:
+      - tone: 1
+        name: "Building entrance"
+        description: "Walking into the Berlin office building"
+      - tone: 2
+        name: "Break room"
+        description: "The kitchen and coffee area"
+      - tone: 3
+        name: "Your desk"
+        description: "Your workspace"
+      - tone: 4
+        name: "Meeting room"
+        description: "Conference room"
+      - tone: 5
+        name: "Roof terrace"
+        description: "On the rooftop terrace"
+
+  # ============================================
+  # FINAL: -ou
+  # ============================================
+  - id: "ou"
+    final: "ou"
+    name: "Uni Bonn"
+    link: "Knowledge - 'know' has the 'ou' sound"
+    description: "University of Bonn campus"
+    epoch: "University years"
+    rooms:
+      - tone: 1
+        name: "Main gate"
+        description: "The university main entrance"
+      - tone: 2
+        name: "Mensa"
+        description: "The student cafeteria"
+      - tone: 3
+        name: "Lecture hall"
+        description: "A large lecture auditorium"
+      - tone: 4
+        name: "Library"
+        description: "The university library"
+      - tone: 5
+        name: "Roof"
+        description: "On top of the main building"
+
+  # ============================================
+  # FINAL: -an
+  # ============================================
+  - id: "an"
+    final: "an"
+    name: "Gymnasium, Bonn"
+    link: "Abitur - graduation"
+    description: "Your Gymnasium (high school) in Bonn"
+    epoch: "Teenage years"
+    rooms:
+      - tone: 1
+        name: "School entrance"
+        description: "The main school doors"
+      - tone: 2
+        name: "Hallway"
+        description: "Corridor with lockers"
+      - tone: 3
+        name: "Classroom"
+        description: "Your regular classroom"
+      - tone: 4
+        name: "Sports field"
+        description: "The Sportplatz outside"
+      - tone: 5
+        name: "Roof"
+        description: "On the school roof"
+
+  # ============================================
+  # FINAL: -ang
+  # ============================================
+  - id: "ang"
+    final: "ang"
+    name: "BlackVeg, Bonn"
+    link: "Hangout spot - 'ang' sound"
+    description: "The vegan restaurant BlackVeg in Bonn"
+    epoch: "Bonn social life"
+    rooms:
+      - tone: 1
+        name: "Restaurant entrance"
+        description: "Walking in the front door"
+      - tone: 2
+        name: "Counter"
+        description: "The ordering counter"
+      - tone: 3
+        name: "Your table"
+        description: "Sitting at your usual table"
+      - tone: 4
+        name: "Back area"
+        description: "Near the kitchen or bathroom"
+      - tone: 5
+        name: "Roof"
+        description: "On top of the building"
+
+  # ============================================
+  # FINAL: -(e)n
+  # The "e" is floating - drops when combined with i/u/ü initials
+  # Examples: len vs lin, dun vs den
+  # ============================================
+  - id: "en"
+    final: "en"
+    name: "PhD Quantum Chemistry, Bonn"
+    link: "Quanten - German for quantum"
+    description: "Your PhD department for quantum chemistry"
+    epoch: "PhD years"
+    rooms:
+      - tone: 1
+        name: "Department entrance"
+        description: "Entering the chemistry building"
+      - tone: 2
+        name: "Corridor"
+        description: "The department hallway"
+      - tone: 3
+        name: "Your office"
+        description: "Your PhD office or desk"
+      - tone: 4
+        name: "Computer room"
+        description: "The server room or compute cluster"
+      - tone: 5
+        name: "Roof"
+        description: "On the building roof"
+
+  # ============================================
+  # FINAL: -(e)ng
+  # The "e" is floating - drops when combined with i initials
+  # Examples: leng vs ling, deng vs ding
+  # ============================================
+  - id: "eng"
+    final: "eng"
+    name: "Pharma Data Engineering, Gothenburg"
+    link: "Engineering - perfect match!"
+    description: "Your data engineering job in pharma"
+    epoch: "Gothenburg data engineering"
+    rooms:
+      - tone: 1
+        name: "Office entrance"
+        description: "Entering the office building"
+      - tone: 2
+        name: "Elevator"
+        description: "The elevator or stairs"
+      - tone: 3
+        name: "Your desk"
+        description: "Your workstation"
+      - tone: 4
+        name: "Meeting room"
+        description: "Team meeting room"
+      - tone: 5
+        name: "Roof"
+        description: "On the rooftop"
+
+  # ============================================
+  # FINAL: -ong
+  # ============================================
+  - id: "ong"
+    final: "ong"
+    name: "Web3/ZK Office, Trier"
+    link: "Strong cryptography - 'ong' sound"
+    description: "Your current job in web3 and zero-knowledge"
+    epoch: "Current chapter, Trier"
+    rooms:
+      - tone: 1
+        name: "Office entrance"
+        description: "Walking into the Trier office"
+      - tone: 2
+        name: "Kitchen"
+        description: "The office kitchen"
+      - tone: 3
+        name: "Your desk"
+        description: "Your workspace with monitors"
+      - tone: 4
+        name: "Meeting room"
+        description: "Conference room"
+      - tone: 5
+        name: "Roof"
+        description: "On the building roof"
