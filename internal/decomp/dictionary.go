@@ -43,7 +43,7 @@ func NewDictionary() *Dictionary {
 	}
 }
 
-// LoadFromFile loads the dictionary from a Make Me a Hanzi dictionary.txt file.
+// LoadFromFile loads the dictionary from a Make Me a Hanzi dictionary.jsonl file.
 func (d *Dictionary) LoadFromFile(path string) error {
 	file, err := os.Open(path)
 	if err != nil {
