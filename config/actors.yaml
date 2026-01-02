@@ -22,8 +22,8 @@ actors:
   - id: "null"
     initial: ""
     category: null
-    name: "Jackie Chan"  # Recommended: Jackie Chan, or someone universally recognizable
-    description: "Used for syllables with no initial consonant"
+    name: "Jackie Chan"
+    description: "The legendary martial artist doing stunts and comedy"
 
   # ============================================
   # MALE ACTORS (18)
@@ -32,110 +32,110 @@ actors:
   - id: "b"
     initial: "b"
     category: male
-    name: "Brad Pitt"  # e.g., Bill Murray, Brad Pitt, your friend Bob
-    description: ""
+    name: "Brad Pitt"
+    description: "Hollywood heartthrob with slicked-back hair"
 
   - id: "p"
     initial: "p"
     category: male
-    name: "Paul McCartney"  # e.g., Paul McCartney, your uncle Pete
-    description: ""
+    name: "Paul McCartney"
+    description: "The Beatle playing his bass guitar left-handed"
 
   - id: "m"
     initial: "m"
     category: male
-    name: "Michael Jordan"  # e.g., Michael Jordan, your friend Mike
-    description: ""
+    name: "Michael Jordan"
+    description: "Tongue out, soaring through the air for a dunk"
 
   - id: "f"
     initial: "f"
     category: male
-    name: "Frank Sinatra"  # e.g., Frank Sinatra, your coworker Fred
-    description: ""
+    name: "Frank Sinatra"
+    description: "In a suit and fedora, crooning into a microphone"
 
   - id: "d"
     initial: "d"
     category: male
-    name: "Denzel Washington"  # e.g., David Bowie, your neighbor Dan
-    description: ""
+    name: "Denzel Washington"
+    description: "Intense gaze, commanding presence in every scene"
 
   - id: "t"
     initial: "t"
     category: male
-    name: "Tom Hanks"  # e.g., Tom Hanks, your brother Tim
-    description: ""
+    name: "Tom Hanks"
+    description: "America's dad, friendly and approachable"
 
   - id: "n"
     initial: "n"
     category: male
-    name: "Nicolas Cage"  # e.g., Nicolas Cage, your friend Nick
-    description: ""
+    name: "Nicolas Cage"
+    description: "Wild-eyed and unpredictable, over-the-top expressions"
 
   - id: "l"
     initial: "l"
     category: male
-    name: "Leonardo DiCaprio"  # e.g., Leonardo DiCaprio, your cousin Larry
-    description: ""
+    name: "Leonardo DiCaprio"
+    description: "Young and charming, raising a champagne glass"
 
   - id: "g"
     initial: "g"
     category: male
-    name: "George Clooney"  # e.g., George Clooney, your grandpa Gary
-    description: ""
+    name: "George Clooney"
+    description: "Silver fox with a mischievous smile"
 
   - id: "k"
     initial: "k"
     category: male
-    name: "Keanu Reeves"  # e.g., Keanu Reeves, your friend Kevin
-    description: ""
+    name: "Keanu Reeves"
+    description: "Stoic and zen, dressed in black like Neo"
 
   - id: "h"
     initial: "h"
     category: male
-    name: "Harrison Ford"  # e.g., Harrison Ford, your colleague Henry
-    description: ""
+    name: "Harrison Ford"
+    description: "Rugged adventurer with his iconic fedora and whip"
 
   - id: "zh"
     initial: "zh"
     category: male
     name: "Joe Biden"
-    description: "Note: 'zhi' is male (fake i), not female. 'zh' sounds like 'j'"
+    description: "Aviator sunglasses, pointing and grinning"
 
   - id: "ch"
     initial: "ch"
     category: male
-    name: "Chuck Norris"  # e.g., Charlie Chaplin, Chuck Norris
-    description: "Note: 'chi' is male (fake i), not female"
+    name: "Chuck Norris"
+    description: "Roundhouse kicking everything in sight"
 
   - id: "sh"
     initial: "sh"
     category: male
-    name: "Shaquille O'Neal"  # e.g., Sean Connery, Shaquille O'Neal
-    description: "Note: 'shi' is male (fake i), not female"
+    name: "Shaquille O'Neal"
+    description: "Giant and playful, dunking and joking around"
 
   - id: "r"
     initial: "r"
     category: male
-    name: "Ryan Gosling"  # e.g., Robert De Niro, your friend Ryan
-    description: "Note: 'ri' is male (fake i), not female"
+    name: "Ryan Gosling"
+    description: "Cool and quiet, with that knowing smirk"
 
   - id: "z"
     initial: "z"
     category: male
-    name: "Zinedine Zidane"  # e.g., Zinedine Zidane, your friend Zack
-    description: "Note: 'zi' is male (fake i), not female"
+    name: "Zinedine Zidane"
+    description: "Bald head gleaming, elegantly dribbling a football"
 
   - id: "c"
     initial: "c"
     category: male
-    name: "Clint Eastwood"  # e.g., Clint Eastwood (sounds like 'ts')
-    description: "Note: 'ci' is male (fake i), not female"
+    name: "Clint Eastwood"
+    description: "Squinting eyes, chewing on a cigar, hand near holster"
 
   - id: "s"
     initial: "s"
     category: male
-    name: "Samuel L. Jackson"  # e.g., Samuel L. Jackson, your friend Steve
-    description: "Note: 'si' is male (fake i), not female"
+    name: "Samuel L. Jackson"
+    description: "Shouting intensely with righteous fury"
 
   # ============================================
   # FEMALE ACTORS (11)
@@ -145,68 +145,68 @@ actors:
   - id: "y"
     initial: "y"
     category: female
-    name: "Yoko Ono"  # e.g., Yoko Ono, your friend Yvonne
-    description: "Standard pinyin writes 'yi' as 'y' alone"
+    name: "Yoko Ono"
+    description: "Avant-garde artist in round sunglasses, singing experimentally"
 
   - id: "bi"
     initial: "bi"
     category: female
-    name: "Beyonce"  # e.g., Beyonce, Britney Spears, your friend Bianca
-    description: ""
+    name: "Beyonce"
+    description: "Queen Bey in a sparkling bodysuit, dancing powerfully"
 
   - id: "pi"
     initial: "pi"
     category: female
-    name: "Pink"  # e.g., Pink (singer), your aunt Patricia
-    description: ""
+    name: "Pink"
+    description: "Edgy pop star with pink hair, doing aerial acrobatics"
 
   - id: "mi"
     initial: "mi"
     category: female
-    name: "Miley Cyrus"  # e.g., Miley Cyrus, your friend Michelle
-    description: ""
+    name: "Miley Cyrus"
+    description: "Wild and free, swinging on a wrecking ball"
 
   - id: "di"
     initial: "di"
     category: female
-    name: "Princess Diana"  # e.g., Diana Ross, Princess Diana
-    description: ""
+    name: "Princess Diana"
+    description: "Elegant and compassionate, in a stunning evening gown"
 
   - id: "ti"
     initial: "ti"
     category: female
-    name: "Tina Turner"  # e.g., Tina Turner, Mother Teresa
-    description: ""
+    name: "Tina Turner"
+    description: "Legs for days, belting out songs with raw energy"
 
   - id: "ni"
     initial: "ni"
     category: female
-    name: "Natalie Portman"  # e.g., Nicole Kidman, your friend Nina
-    description: ""
+    name: "Natalie Portman"
+    description: "Graceful and intelligent, poised like a ballerina"
 
   - id: "li"
     initial: "li"
     category: female
-    name: "Lisa Kudrow (Friends)"  # e.g., Lisa Simpson, your sister Linda
-    description: ""
+    name: "Lisa Kudrow"
+    description: "Quirky and lovable, playing Smelly Cat on guitar"
 
   - id: "ji"
     initial: "ji"
     category: female
-    name: "Jennifer Lopez"  # e.g., Jennifer Lopez, your friend Gina
-    description: ""
+    name: "Jennifer Lopez"
+    description: "Glamorous diva in a plunging green dress"
 
   - id: "qi"
     initial: "qi"
     category: female
-    name: "Queen Elisabeth"  # e.g., Queen Elizabeth, your friend Queenie
-    description: "Sounds like 'chee'"
+    name: "Queen Elizabeth"
+    description: "Regal and proper, waving from a balcony with her corgis"
 
   - id: "xi"
     initial: "xi"
     category: female
-    name: "Xena (Warrior Princess)"  # e.g., Xena (Warrior Princess), your friend Sheila
-    description: "Sounds like 'shee'"
+    name: "Xena"
+    description: "Warrior Princess with her chakram, battle cry echoing"
 
   # ============================================
   # FICTIONAL ACTORS (19)
@@ -216,116 +216,116 @@ actors:
   - id: "w"
     initial: "w"
     category: fictional
-    name: "Wario"  # e.g., Wolverine, Wario, Wonder Woman
-    description: "Standard pinyin writes 'wu' as 'w' alone"
+    name: "Wario"
+    description: "Mario's greedy rival with the zig-zag mustache"
 
   - id: "bu"
     initial: "bu"
     category: fictional
-    name: "Bugs Bunny"  # e.g., Bugs Bunny, Buzz Lightyear
-    description: ""
+    name: "Bugs Bunny"
+    description: "Chomping a carrot, asking 'What's up, doc?'"
 
   - id: "pu"
     initial: "pu"
     category: fictional
-    name: "Pikachu"  # e.g., Puss in Boots, Pikachu
-    description: ""
+    name: "Pikachu"
+    description: "Yellow electric mouse, cheeks sparking with lightning"
 
   - id: "mu"
     initial: "mu"
     category: fictional
-    name: "Mario"  # e.g., Mulan, Mario
-    description: ""
+    name: "Mario"
+    description: "Red cap and overalls, jumping on goombas"
 
   - id: "fu"
     initial: "fu"
     category: fictional
-    name: "Frodo"  # e.g., Fiona (Shrek), Frodo
-    description: ""
+    name: "Frodo"
+    description: "Small hobbit clutching the One Ring on a chain"
 
   - id: "du"
     initial: "du"
     category: fictional
-    name: "Dumbledore"  # e.g., Dumbledore, Darth Vader, Donald Duck
-    description: ""
+    name: "Dumbledore"
+    description: "Long white beard, half-moon spectacles, wand raised"
 
   - id: "tu"
     initial: "tu"
     category: fictional
-    name: "Thor"  # e.g., Tony Stark (Iron Man), Thanos
-    description: ""
+    name: "Thor"
+    description: "God of Thunder swinging Mjolnir, lightning crackling"
 
   - id: "nu"
     initial: "nu"
     category: fictional
-    name: "Naruto"  # e.g., Nemo, Naruto
-    description: ""
+    name: "Naruto"
+    description: "Orange ninja running with arms behind, shouting 'Believe it!'"
 
   - id: "lu"
     initial: "lu"
     category: fictional
-    name: "Luke Skywalker"  # e.g., Luigi, Luke Skywalker, Loki
-    description: ""
+    name: "Luke Skywalker"
+    description: "Jedi in black, holding a green lightsaber"
 
   - id: "gu"
     initial: "gu"
     category: fictional
-    name: "Gandalf"  # e.g., Goku, Groot, Gandalf
-    description: ""
+    name: "Gandalf"
+    description: "Grey wizard slamming staff, shouting 'You shall not pass!'"
 
   - id: "ku"
     initial: "ku"
     category: fictional
-    name: "King Kong"  # e.g., Kermit the Frog, King Kong
-    description: ""
+    name: "King Kong"
+    description: "Giant ape beating chest atop the Empire State Building"
 
   - id: "hu"
     initial: "hu"
     category: fictional
-    name: "Harry Potter"  # e.g., Hulk, Harry Potter
-    description: ""
+    name: "Harry Potter"
+    description: "Lightning scar, round glasses, waving a wand"
 
   - id: "zhu"
     initial: "zhu"
     category: fictional
-    name: "Zelda"  # e.g., Zhu Bajie (Journey to the West), Zelda
-    description: ""
+    name: "Zelda"
+    description: "Princess of Hyrule with pointed ears and royal gown"
 
   - id: "chu"
     initial: "chu"
     category: fictional
-    name: "Chewbacca"  # e.g., Chucky, Chewbacca
-    description: ""
+    name: "Chewbacca"
+    description: "Tall furry Wookiee roaring and firing a bowcaster"
 
   - id: "shu"
     initial: "shu"
     category: fictional
-    name: "Shrek"  # e.g., Shrek, Sherlock Holmes
-    description: ""
+    name: "Shrek"
+    description: "Big green ogre in a swamp, yelling about layers"
 
   - id: "ru"
     initial: "ru"
     category: fictional
-    name: "R2-D2"  # e.g., R2-D2, Rapunzel
-    description: ""
+    name: "R2-D2"
+    description: "Beeping and whistling astromech droid rolling around"
 
   - id: "zu"
     initial: "zu"
     category: fictional
-    name: "Zuko (Avatar)"  # e.g., Zuko (Avatar), Zorro
-    description: ""
+    name: "Zuko"
+    description: "Scarred Fire Nation prince, shooting flames from fists"
 
   - id: "cu"
     initial: "cu"
     category: fictional
-    name: "Captain Hook"  # e.g., Curious George, Captain Hook
-    description: ""
+    name: "Captain Hook"
+    description: "Pirate with curly wig, hook hand, afraid of crocodiles"
 
   - id: "su"
     initial: "su"
     category: fictional
-    name: "Superman"  # e.g., Superman, SpongeBob, Simba
-    description: ""
+    name: "Superman"
+    description: "Red cape flowing, flying with fist forward"
 
   # ============================================
   # GODS / WORLD LEADERS (6)
@@ -335,35 +335,35 @@ actors:
   - id: "yu"
     initial: "yu"
     category: god_leader
-    name: "Yoda"  # e.g., Zeus, Yoda (if treating as godlike), Julius Caesar
-    description: "Standard pinyin writes 'yü' as 'yu'"
+    name: "Yoda"
+    description: "Small green Jedi Master, speaking backwards wisdom"
 
   - id: "nv"
     initial: "nü"
     category: god_leader
     name: "Neptune"
-    description: "Roman god of the sea. Written as 'nü' or 'nv' in pinyin"
+    description: "Roman sea god rising from waves with his trident"
 
   - id: "lv"
     initial: "lü"
     category: god_leader
-    name: "Loki"  # e.g., Loki (as a god), Louis XIV
-    description: "Written as 'lü' or 'lv' in pinyin"
+    name: "Loki"
+    description: "Trickster god with horned helmet, scheming mischievously"
 
   - id: "ju"
     initial: "ju"
     category: god_leader
-    name: "Jesus"  # e.g., Jupiter, Jesus, Joan of Arc
-    description: "Pronounced with ü sound despite 'u' spelling"
+    name: "Jesus"
+    description: "Robed figure with open arms, radiating peace"
 
   - id: "qu"
     initial: "qu"
     category: god_leader
-    name: "Queen Victoria"  # e.g., Quetzalcoatl, Queen Victoria
-    description: "Pronounced with ü sound despite 'u' spelling"
+    name: "Queen Victoria"
+    description: "Stern empress in black, 'We are not amused'"
 
   - id: "xu"
     initial: "xu"
     category: god_leader
-    name: "Xi Jinping"  # e.g., Shiva, Xi Jinping (world leader)
-    description: "Pronounced with ü sound despite 'u' spelling"
+    name: "Xi Jinping"
+    description: "Chinese leader in a dark suit, waving formally"
