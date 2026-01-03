@@ -227,54 +227,166 @@ func (m SettingsModel) renderSets() string {
 	b.WriteString(settingsHeaderStyle.Render(fmt.Sprintf("Sets (%d configured)", len(m.config.Sets))))
 	b.WriteString("\n\n")
 
+	// Table styles
+	headerStyle := lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#4ecdc4"))
+	idStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#ffe66d")).Width(6)
+	finalStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#ff6b6b")).Width(6)
+	nameStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#f1faee"))
+	descStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#888888")).Italic(true)
+	borderStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#3d5a80"))
+
 	// Header row
-	headerFmt := "%-6s %-10s %s"
-	header := fmt.Sprintf(headerFmt, "ID", "Final", "Name")
-	b.WriteString(settingsMutedStyle.Render(header))
+	b.WriteString(headerStyle.Render(fmt.Sprintf("%-6s %-6s %s", "Final", "ID", "Name / Description")))
 	b.WriteString("\n")
-	b.WriteString(settingsMutedStyle.Render(strings.Repeat("─", 50)))
+	b.WriteString(borderStyle.Render(strings.Repeat("─", 60)))
 	b.WriteString("\n")
 
-	// Calculate visible range
-	visibleHeight := m.height - 12
-	if visibleHeight < 5 {
-		visibleHeight = 5
+	// Calculate visible range (3 lines per set: name + description + tones)
+	visibleHeight := m.height - 14
+	if visibleHeight < 9 {
+		visibleHeight = 9
 	}
+	visibleSets := visibleHeight / 3
 	start := m.scrollY
-	end := start + visibleHeight
+	end := start + visibleSets
 	if end > len(m.config.Sets) {
 		end = len(m.config.Sets)
 	}
-	if start > len(m.config.Sets) {
+	if start >= len(m.config.Sets) {
 		start = 0
+		end = visibleSets
+		if end > len(m.config.Sets) {
+			end = len(m.config.Sets)
+		}
 	}
+
+	// Tone label styles
+	toneMarkStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#ff6b6b")).Bold(true)
+	toneNameStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#a8e6cf"))
 
 	// Set rows
 	for i := start; i < end; i++ {
 		s := m.config.Sets[i]
 		final := s.Final
 		if final == "" {
-			final = "(null)"
+			final = "Ø"
 		}
-		row := fmt.Sprintf("%-6s %-10s %s", s.ID, final, s.Name)
-		b.WriteString(settingsRowStyle.Render(row))
+		id := s.ID
+		if id == "" {
+			id = "Ø"
+		}
+
+		// First line: Final, ID, Name
+		b.WriteString(finalStyle.Render(final))
+		b.WriteString(idStyle.Render(id))
+		b.WriteString(nameStyle.Render(s.Name))
 		b.WriteString("\n")
 
-		// Show rooms under each set (if within visible area)
-		for _, room := range s.Rooms {
-			roomRow := fmt.Sprintf("       └─ Tone %d: %s", room.Tone, room.Name)
-			b.WriteString(settingsMutedStyle.Render(roomRow))
+		// Second line: Description (indented)
+		if s.Description != "" {
+			b.WriteString("            ")
+			b.WriteString(descStyle.Render(s.Description))
+			b.WriteString("\n")
+		}
+
+		// Third line: Tones
+		if len(s.Rooms) > 0 {
+			b.WriteString("            ")
+			for j, room := range s.Rooms {
+				if j > 0 {
+					b.WriteString("  ")
+				}
+				// Apply tone mark to the final
+				tonedFinal := applyToneMark(s.Final, int(room.Tone))
+				b.WriteString(toneMarkStyle.Render(tonedFinal + ":"))
+				b.WriteString(toneNameStyle.Render(room.Name))
+			}
 			b.WriteString("\n")
 		}
 	}
 
 	// Scroll indicator
-	if len(m.config.Sets) > visibleHeight {
+	if len(m.config.Sets) > visibleSets {
 		b.WriteString("\n")
-		b.WriteString(settingsMutedStyle.Render(fmt.Sprintf("Showing %d-%d of %d", start+1, end, len(m.config.Sets))))
+		b.WriteString(settingsMutedStyle.Render(fmt.Sprintf("Showing %d-%d of %d (j/k to scroll)", start+1, end, len(m.config.Sets))))
 	}
 
 	return b.String()
+}
+
+func truncate(s string, max int) string {
+	if len(s) <= max {
+		return s
+	}
+	return s[:max-1] + "…"
+}
+
+// applyToneMark adds a tone mark to a pinyin final
+func applyToneMark(final string, tone int) string {
+	if final == "" {
+		// Null initial - just return tone marker on 'a'
+		tones := map[int]string{1: "ā", 2: "á", 3: "ǎ", 4: "à", 5: "a"}
+		if m, ok := tones[tone]; ok {
+			return m
+		}
+		return "?"
+	}
+
+	// Tone mark mappings for each vowel
+	toneMap := map[rune][]rune{
+		'a': {'ā', 'á', 'ǎ', 'à', 'a'},
+		'e': {'ē', 'é', 'ě', 'è', 'e'},
+		'i': {'ī', 'í', 'ǐ', 'ì', 'i'},
+		'o': {'ō', 'ó', 'ǒ', 'ò', 'o'},
+		'u': {'ū', 'ú', 'ǔ', 'ù', 'u'},
+		'ü': {'ǖ', 'ǘ', 'ǚ', 'ǜ', 'ü'},
+	}
+
+	// Find which vowel to mark (pinyin rules)
+	// 1. 'a' or 'e' always gets the mark
+	// 2. In 'ou', 'o' gets the mark
+	// 3. Otherwise, the last vowel gets the mark
+	runes := []rune(final)
+	markIndex := -1
+
+	for i, r := range runes {
+		if r == 'a' || r == 'e' {
+			markIndex = i
+			break
+		}
+	}
+
+	if markIndex == -1 {
+		// Check for 'ou'
+		for i, r := range runes {
+			if r == 'o' && i+1 < len(runes) && runes[i+1] == 'u' {
+				markIndex = i
+				break
+			}
+		}
+	}
+
+	if markIndex == -1 {
+		// Find last vowel
+		for i := len(runes) - 1; i >= 0; i-- {
+			if _, isVowel := toneMap[runes[i]]; isVowel {
+				markIndex = i
+				break
+			}
+		}
+	}
+
+	if markIndex == -1 || tone < 1 || tone > 5 {
+		return final
+	}
+
+	// Apply the tone mark
+	vowel := runes[markIndex]
+	if tones, ok := toneMap[vowel]; ok {
+		runes[markIndex] = tones[tone-1]
+	}
+
+	return string(runes)
 }
 
 func (m SettingsModel) renderProps() string {
