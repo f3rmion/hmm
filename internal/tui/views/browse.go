@@ -38,6 +38,19 @@ var (
 					Foreground(lipgloss.Color("#666666")).
 					Italic(true)
 
+	browseBigCharStyle = lipgloss.NewStyle().
+				Bold(true).
+				Foreground(lipgloss.Color("#ffe66d")).
+				Background(lipgloss.Color("#1a1a2e")).
+				Padding(2, 8).
+				Align(lipgloss.Center)
+
+	browsePinyinUnderStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#4ecdc4")).
+				Bold(true).
+				Align(lipgloss.Center).
+				Padding(0, 1)
+
 	browseWordNavStyle = lipgloss.NewStyle().
 				Foreground(lipgloss.Color("#4ecdc4")).
 				Bold(true).
@@ -619,29 +632,7 @@ func (m BrowseModel) renderNoPackage() string {
 func (m BrowseModel) renderNoteView() string {
 	var b strings.Builder
 
-	note := m.filteredNotes[m.currentNote]
-	fieldNames := m.pkg.GetFieldNames(note)
-
-	// Show main fields
-	for i, value := range note.Fields {
-		if i >= 3 {
-			break
-		}
-		fieldName := fmt.Sprintf("Field %d", i)
-		if i < len(fieldNames) {
-			fieldName = fieldNames[i]
-		}
-		cleanValue := stripHTMLTags(value)
-		if len(cleanValue) > 80 {
-			cleanValue = cleanValue[:80] + "..."
-		}
-		b.WriteString(browseFieldLabelStyle.Render(fieldName + ": "))
-		b.WriteString(browseFieldValueStyle.Render(cleanValue))
-		b.WriteString("\n")
-	}
-	b.WriteString("\n")
-
-	// Character tabs
+	// Character tabs for multi-character words
 	if len(m.characters) > 1 {
 		b.WriteString(m.renderCharTabs())
 		b.WriteString("\n")
@@ -683,6 +674,40 @@ func (m BrowseModel) renderCharTabs() string {
 
 func (m BrowseModel) renderCharacterDetail(r components.CharacterResult) string {
 	var b strings.Builder
+
+	// Large centered character display
+	charDisplay := browseBigCharStyle.Render(r.Character)
+	pinyinDisplay := browsePinyinUnderStyle.Render(r.Pinyin)
+
+	// Center the character block within view width
+	charBlock := lipgloss.JoinVertical(lipgloss.Center, charDisplay, pinyinDisplay)
+	contentWidth := m.width - 4
+	if contentWidth < 40 {
+		contentWidth = 40
+	}
+	centeredChar := lipgloss.NewStyle().
+		Width(contentWidth).
+		Align(lipgloss.Center).
+		Render(charBlock)
+
+	b.WriteString("\n")
+	b.WriteString(centeredChar)
+	b.WriteString("\n")
+
+	// Meaning (centered)
+	if r.Meaning != "" {
+		meaning := r.Meaning
+		if len(meaning) > 60 {
+			meaning = meaning[:60] + "..."
+		}
+		meaningStyle := lipgloss.NewStyle().
+			Foreground(lipgloss.Color("#f1faee")).
+			Width(contentWidth).
+			Align(lipgloss.Center)
+		b.WriteString(meaningStyle.Render(meaning))
+		b.WriteString("\n")
+	}
+	b.WriteString("\n")
 
 	// HMM Breakdown
 	b.WriteString(m.renderHMMBox(r))

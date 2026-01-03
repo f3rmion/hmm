@@ -51,9 +51,22 @@ var (
 			Bold(true).
 			Foreground(lipgloss.Color("#ffe66d")).
 			Background(lipgloss.Color("#2d3436")).
-			Padding(1, 4).
+			Padding(2, 6).
 			Margin(1, 0).
 			Align(lipgloss.Center)
+
+	bigCharStyle = lipgloss.NewStyle().
+			Bold(true).
+			Foreground(lipgloss.Color("#ffe66d")).
+			Background(lipgloss.Color("#1a1a2e")).
+			Padding(2, 8).
+			Align(lipgloss.Center)
+
+	pinyinUnderStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#4ecdc4")).
+				Bold(true).
+				Align(lipgloss.Center).
+				Padding(0, 1)
 
 	labelStyle = lipgloss.NewStyle().
 			Foreground(lipgloss.Color("#a8dadc")).
@@ -509,21 +522,26 @@ func (m LookupModel) renderWordBar() string {
 func (m LookupModel) renderCharacterDetail(r components.CharacterResult) string {
 	var b strings.Builder
 
-	// Medium centered character display
-	charDisplay := characterStyle.Render(r.Character)
-	pinyinDisplay := lipgloss.NewStyle().
-		Foreground(lipgloss.Color("#4ecdc4")).
-		Italic(true).
+	// Large centered character display
+	charDisplay := bigCharStyle.Render(r.Character)
+	pinyinDisplay := pinyinUnderStyle.Render(r.Pinyin)
+
+	// Center the character block within view width
+	charBlock := lipgloss.JoinVertical(lipgloss.Center, charDisplay, pinyinDisplay)
+	contentWidth := m.width - 4
+	if contentWidth < 40 {
+		contentWidth = 40
+	}
+	centeredChar := lipgloss.NewStyle().
+		Width(contentWidth).
 		Align(lipgloss.Center).
-		Width(lipgloss.Width(charDisplay)).
-		Render(r.Pinyin)
+		Render(charBlock)
 
-	b.WriteString(charDisplay)
 	b.WriteString("\n")
-	b.WriteString(pinyinDisplay)
+	b.WriteString(centeredChar)
 	b.WriteString("\n")
 
-	// Meaning
+	// Meaning (centered)
 	if r.Meaning != "" {
 		meaning := r.Meaning
 		maxLen := 60
@@ -533,9 +551,13 @@ func (m LookupModel) renderCharacterDetail(r components.CharacterResult) string 
 		if len(meaning) > maxLen {
 			meaning = meaning[:maxLen] + "..."
 		}
-		b.WriteString(m.renderRow("Meaning", meaning))
+		meaningStyle := lipgloss.NewStyle().
+			Foreground(lipgloss.Color("#f1faee")).
+			Width(contentWidth).
+			Align(lipgloss.Center)
+		b.WriteString(meaningStyle.Render(meaning))
+		b.WriteString("\n")
 	}
-	b.WriteString("\n")
 
 	// HMM Breakdown Box
 	hmmBox := m.renderHMMBox(r)

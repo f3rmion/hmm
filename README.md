@@ -21,6 +21,23 @@ For example, the character 好 (hǎo, "good"):
 
 You imagine Harrison Ford in an office, interacting with a red dress and baby rattle - creating a unique, memorable scene for this character.
 
+## Example
+
+Here is an example for the character 里 (lǐ, "inside/village/half kilometer"):
+
+- Initial `l` → Lisa Kudrow (from Friends)
+- Final `i` → A cozy living room
+- Tone `3` → Near the fireplace
+- Components `田 + 土` → Rice paddy field + pile of dirt
+
+HMM generates this image prompt:
+
+> Lisa Kudrow from Friends standing in a cozy living room with wooden furniture and warm lighting, dramatically measuring the distance between a miniature flooded rice paddy field and a large pile of fresh brown dirt using an old-fashioned measuring stick, her expression comically serious as she announces "exactly half a kilometer between these village landmarks!" The rice paddy sits on the coffee table while the dirt pile occupies the corner near the fireplace, both impossibly large for the indoor setting. Cinematic lighting, detailed realism, slightly surreal domestic scene.
+
+![Example image for 里](assets/example.png)
+
+The generated scene combines all elements into a memorable, slightly absurd image that encodes the character's pronunciation and meaning.
+
 ## Installation
 
 ```bash
@@ -48,16 +65,17 @@ hmm
 The TUI provides:
 - Lookup View (1) - Type characters to see their HMM breakdown
 - Browse View (2) - Browse Anki deck cards with HMM data
-- Open Deck (3) - Load an Anki .apkg file
-- Settings (4) - View your configuration
+- Learn View (3) - Flashcard-style learning with flip cards
+- Open Deck (4) - Load an Anki .apkg file
+- Settings (5) - View your configuration
 
 #### Keyboard Shortcuts
 
 | Key | Action |
 |-----|--------|
-| `1-4` | Switch views |
+| `1-5` | Switch views |
 | `Tab` | Toggle sidebar focus |
-| `?` | Show help (when sidebar focused) |
+| `?` | Show help |
 | `q` | Quit |
 
 Lookup View:
@@ -78,6 +96,15 @@ Browse View:
 | `/` | Search |
 | `g` | Generate prompt for current |
 | `B` | Batch generate all prompts |
+
+Learn View:
+
+| Key | Action |
+|-----|--------|
+| `Space` | Flip card |
+| `←/→` | Previous/next card |
+| `r` | Reset to first card |
+| `g` | Generate prompt (when flipped) |
 
 ### CLI Commands
 

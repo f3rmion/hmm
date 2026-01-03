@@ -19,6 +19,7 @@ type ViewType int
 const (
 	ViewLookup ViewType = iota
 	ViewBrowse
+	ViewLearn
 	ViewFilePicker
 	ViewSettings
 )
@@ -72,6 +73,7 @@ type AppModel struct {
 	// Sub-models (views)
 	lookupView     views.LookupModel
 	browseView     views.BrowseModel
+	learnView      views.LearnModel
 	filePickerView views.FilePickerModel
 	settingsView   views.SettingsModel
 
@@ -97,8 +99,9 @@ func NewApp(dict *decomp.Dictionary, cfg *config.Config) AppModel {
 	menuItems := []MenuItem{
 		{Label: "Lookup", Icon: "字", View: ViewLookup, Shortcut: "1"},
 		{Label: "Browse", Icon: "卡", View: ViewBrowse, Shortcut: "2"},
-		{Label: "Open Deck", Icon: "開", View: ViewFilePicker, Shortcut: "3"},
-		{Label: "Settings", Icon: "設", View: ViewSettings, Shortcut: "4"},
+		{Label: "Learn", Icon: "學", View: ViewLearn, Shortcut: "3"},
+		{Label: "Open Deck", Icon: "開", View: ViewFilePicker, Shortcut: "4"},
+		{Label: "Settings", Icon: "設", View: ViewSettings, Shortcut: "5"},
 	}
 
 	app := AppModel{
@@ -114,6 +117,7 @@ func NewApp(dict *decomp.Dictionary, cfg *config.Config) AppModel {
 
 		lookupView:     views.NewLookupModel(dict, cfg, gen, llmClient),
 		browseView:     views.NewBrowseModel(dict, cfg, gen, llmClient),
+		learnView:      views.NewLearnModel(dict, cfg, gen, llmClient),
 		filePickerView: views.NewFilePickerModel(),
 		settingsView:   views.NewSettingsModel(cfg),
 	}
@@ -127,6 +131,7 @@ func NewAppWithPackage(dict *decomp.Dictionary, cfg *config.Config, pkg *anki.Pa
 	app.ankiPackage = pkg
 	app.ankiPath = path
 	app.browseView.SetPackage(pkg)
+	app.learnView.SetPackage(pkg)
 	app.currentView = ViewBrowse
 	app.selectedMenu = 1 // Browse
 	return app
@@ -174,13 +179,18 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.sidebarActive = false
 			return m, nil
 		case "3":
-			m.currentView = ViewFilePicker
+			m.currentView = ViewLearn
 			m.selectedMenu = 2
 			m.sidebarActive = false
 			return m, nil
 		case "4":
-			m.currentView = ViewSettings
+			m.currentView = ViewFilePicker
 			m.selectedMenu = 3
+			m.sidebarActive = false
+			return m, nil
+		case "5":
+			m.currentView = ViewSettings
+			m.selectedMenu = 4
 			m.sidebarActive = false
 			return m, nil
 		case "tab":
@@ -219,6 +229,7 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 		m.lookupView.SetSize(contentWidth, contentHeight)
 		m.browseView.SetSize(contentWidth, contentHeight)
+		m.learnView.SetSize(contentWidth, contentHeight)
 		m.filePickerView.SetSize(contentWidth, contentHeight)
 		m.settingsView.SetSize(contentWidth, contentHeight)
 
@@ -247,6 +258,7 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.ankiPackage = msg.Package
 			m.ankiPath = msg.Path
 			m.browseView.SetPackage(msg.Package)
+			m.learnView.SetPackage(msg.Package)
 			m.currentView = ViewBrowse
 			m.selectedMenu = 1
 		}
@@ -261,6 +273,8 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.lookupView, cmd = m.lookupView.Update(msg)
 		case ViewBrowse:
 			m.browseView, cmd = m.browseView.Update(msg)
+		case ViewLearn:
+			m.learnView, cmd = m.learnView.Update(msg)
 		case ViewFilePicker:
 			m.filePickerView, cmd = m.filePickerView.Update(msg)
 		case ViewSettings:
@@ -295,6 +309,8 @@ func (m AppModel) View() string {
 		content = m.lookupView.View()
 	case ViewBrowse:
 		content = m.browseView.View()
+	case ViewLearn:
+		content = m.learnView.View()
 	case ViewFilePicker:
 		content = m.filePickerView.View()
 	case ViewSettings:
@@ -390,7 +406,7 @@ func (m AppModel) renderHelp() string {
 	helpText := titleStyle.Render("HMM - Hanzi Movie Method") + "\n\n"
 
 	helpText += sectionStyle.Render("Global Keys") + "\n"
-	helpText += keyStyle.Render("1-4") + descStyle.Render("Switch views") + "\n"
+	helpText += keyStyle.Render("1-5") + descStyle.Render("Switch views") + "\n"
 	helpText += keyStyle.Render("tab") + descStyle.Render("Toggle sidebar focus") + "\n"
 	helpText += keyStyle.Render("?") + descStyle.Render("Show this help") + "\n"
 	helpText += keyStyle.Render("q") + descStyle.Render("Quit") + "\n"
@@ -407,6 +423,11 @@ func (m AppModel) renderHelp() string {
 	helpText += keyStyle.Render("/") + descStyle.Render("Search") + "\n"
 	helpText += keyStyle.Render("g") + descStyle.Render("Generate prompt") + "\n"
 	helpText += keyStyle.Render("B") + descStyle.Render("Batch generate all") + "\n"
+
+	helpText += sectionStyle.Render("Learn View") + "\n"
+	helpText += keyStyle.Render("space") + descStyle.Render("Flip card") + "\n"
+	helpText += keyStyle.Render("←/→") + descStyle.Render("Prev/next card") + "\n"
+	helpText += keyStyle.Render("r") + descStyle.Render("Reset to first card") + "\n"
 
 	helpText += sectionStyle.Render("File Picker") + "\n"
 	helpText += keyStyle.Render("enter") + descStyle.Render("Select file/enter dir") + "\n"
