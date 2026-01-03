@@ -16,6 +16,7 @@ import (
 	"github.com/f3rmion/hmm/internal/llm"
 	"github.com/f3rmion/hmm/internal/pinyin"
 	"github.com/f3rmion/hmm/internal/prompt"
+	"github.com/f3rmion/hmm/internal/tui/bigchar"
 	"github.com/f3rmion/hmm/internal/tui/components"
 	"github.com/mattn/go-runewidth"
 )
@@ -59,7 +60,7 @@ var (
 			Bold(true).
 			Foreground(lipgloss.Color("#ffe66d")).
 			Background(lipgloss.Color("#1a1a2e")).
-			Padding(2, 8).
+			Padding(3, 12).
 			Align(lipgloss.Center)
 
 	pinyinUnderStyle = lipgloss.NewStyle().
@@ -522,16 +523,31 @@ func (m LookupModel) renderWordBar() string {
 func (m LookupModel) renderCharacterDetail(r components.CharacterResult) string {
 	var b strings.Builder
 
-	// Large centered character display
-	charDisplay := bigCharStyle.Render(r.Character)
-	pinyinDisplay := pinyinUnderStyle.Render(r.Pinyin)
-
-	// Center the character block within view width
-	charBlock := lipgloss.JoinVertical(lipgloss.Center, charDisplay, pinyinDisplay)
 	contentWidth := m.width - 4
 	if contentWidth < 40 {
 		contentWidth = 40
 	}
+
+	// Try ASCII art rendering first
+	var charDisplay string
+	if bigchar.IsAvailable() {
+		asciiChar := bigchar.GetCached(r.Character, 30, 15)
+		if asciiChar != "" {
+			charDisplay = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#ffe66d")).
+				Render(asciiChar)
+		}
+	}
+
+	// Fallback to regular character in a box
+	if charDisplay == "" {
+		charDisplay = bigCharStyle.Render(r.Character)
+	}
+
+	pinyinDisplay := pinyinUnderStyle.Render(r.Pinyin)
+
+	// Center the character block within view width
+	charBlock := lipgloss.JoinVertical(lipgloss.Center, charDisplay, pinyinDisplay)
 	centeredChar := lipgloss.NewStyle().
 		Width(contentWidth).
 		Align(lipgloss.Center).

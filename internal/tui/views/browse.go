@@ -42,7 +42,7 @@ var (
 				Bold(true).
 				Foreground(lipgloss.Color("#ffe66d")).
 				Background(lipgloss.Color("#1a1a2e")).
-				Padding(2, 8).
+				Padding(3, 12).
 				Align(lipgloss.Center)
 
 	browsePinyinUnderStyle = lipgloss.NewStyle().

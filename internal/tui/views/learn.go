@@ -24,7 +24,7 @@ var (
 				Bold(true).
 				Foreground(lipgloss.Color("#ffe66d")).
 				Background(lipgloss.Color("#1a1a2e")).
-				Padding(3, 10).
+				Padding(4, 14).
 				Align(lipgloss.Center)
 
 	learnPinyinStyle = lipgloss.NewStyle().
